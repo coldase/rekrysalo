@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import LandingPage from "./components/pages/landing-page/landing-page";
 import FormPage from "./components/pages/form-page/form-page";
@@ -12,12 +12,12 @@ const App = () => {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter basename="/">
         <Routes>
-          <Route path="/" exact element={<LandingPage />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/form/:tab" element={<FormPage />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };
