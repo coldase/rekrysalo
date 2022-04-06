@@ -1,0 +1,50 @@
+.form-page-nav-block {
+  /* display: flex; */
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+  align-self: center;
+  width: 110px;
+  min-width: 110px;
+  height: 100px;
+  background-color: var(--main-green);
+  flex-direction: column;
+  transition: 0.2s;
+}
+
+.form-page-nav-block p:first-child {
+  color: var(--main-white);
+  font-weight: 600;
+  margin: 0;
+  align-self: center;
+  font-size: 50px;
+}
+.form-page-nav-block p:last-child {
+  color: var(--main-white);
+  text-align: center;
+  margin: 0;
+  align-self: center;
+}
+
+#selected-tab {
+  background-color: var(--main-blue);
+}
+
+@media only screen and (max-width: 1000px) {
+  .form-page-nav-block {
+    min-width: 80px;
+    margin: 10px;
+    width: 80px;
+    height: 70px;
+    justify-content: center;
+  }
+  .form-page-nav-block p:first-child {
+    align-self: center;
+    font-size: 30px;
+  }
+  .form-page-nav-block p:last-child {
+    font-size: 12px;
+  }
+}

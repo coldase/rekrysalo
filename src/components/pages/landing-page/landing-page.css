@@ -1,0 +1,25 @@
+.landingpage-container {
+  position: absolute;
+  top: 0;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  background: url("../../../assets/pics/rekrybgbg.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  /* height: 100%;
+  width: 100%; */
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.landingpage-container::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 770px) {
+  .landingpage-container {
+    bottom: 50px;
+  }
+}

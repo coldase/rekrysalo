@@ -1,0 +1,31 @@
+.landingpage-nav-container {
+  /* background-color: red; */
+  height: 80px;
+  margin: 50px 50px 20px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.landingpage-nav-block {
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+  background-color: var(--main-green);
+  cursor: pointer;
+}
+
+.landingpage-nav-block p {
+  align-self: center;
+  font-size: 50px;
+  font-weight: 600;
+
+  color: var(--main-white);
+}
+
+@media only screen and (max-width: 770px) {
+  .landingpage-nav-container {
+    margin: 0px 30px;
+  }
+}

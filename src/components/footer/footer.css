@@ -1,0 +1,24 @@
+.footer-container {
+  background: var(--footer-bg);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 100px;
+  display: flex;
+}
+
+.footer-container img {
+  align-self: center;
+  height: 50px;
+  margin-left: 50px;
+  transition: 0.2s;
+}
+
+@media only screen and (max-width: 770px) {
+  .footer-container {
+    height: 50px;
+  }
+  .footer-container img {
+    height: 25px;
+  }
+}
