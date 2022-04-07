@@ -9,6 +9,10 @@
   cursor: pointer;
 }
 
+.landingpage-nav-block:hover {
+  background-color: var(--main-blue);
+}
+
 .landingpage-nav-block p {
   align-self: center;
   font-size: 50px;

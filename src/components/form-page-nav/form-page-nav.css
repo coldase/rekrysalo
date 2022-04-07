@@ -19,13 +19,6 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.form-page-nav-line {
-  height: 5px;
-  width: 100%;
-  background-color: blue;
-  position: relative;
-  align-self: center;
-}
 
 .form-page-nav-block-container::-webkit-scrollbar {
   display: none;
@@ -46,8 +39,13 @@
 }
 
 .form-page-nav-home:first-child {
+  transition: 0.2s;
   font-size: 70px;
   color: var(--main-green);
+}
+.form-page-nav-home:first-child:hover {
+  font-size: 70px;
+  color: var(--main-blue);
 }
 
 .form-page-nav-preview {
@@ -64,8 +62,13 @@
   /* background-color: var(--main-green); */
 }
 .form-page-nav-preview:last-child {
+  transition: 0.2s;
   font-size: 80px;
   color: var(--main-green);
+}
+.form-page-nav-preview:last-child:hover {
+  font-size: 80px;
+  color: var(--main-blue);
 }
 
 #checked {

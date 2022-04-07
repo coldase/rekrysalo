@@ -14,6 +14,10 @@
   transition: 0.2s;
 }
 
+.form-page-nav-block:hover {
+  background-color: var(--main-blue);
+}
+
 .form-page-nav-block p:first-child {
   color: var(--main-white);
   font-weight: 600;
