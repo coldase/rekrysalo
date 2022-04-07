@@ -1,3 +1,15 @@
+/*
+
+  TODO:
+    - setValues(), tsekkaa löytyykö eventistä type "checkbox" etc
+    - ja ota pois formeista formeista
+    - tee Page not found! -sivu
+    - Info bubblet
+    - Preview sivu
+    - Tallenna button?
+
+*/
+
 import "./App.css";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -5,7 +17,6 @@ import { useEffect, useState } from "react";
 import LandingPage from "./components/pages/landing-page/landing-page";
 import FormPage from "./components/pages/form-page/form-page";
 import { defaultFormData } from "./data/defaultFormData";
-
 const App = () => {
   const [formData, setFormData] = useState(defaultFormData);
 
