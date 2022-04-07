@@ -1,8 +1,8 @@
 /*
 
   TODO:
-    - setValues(), tsekkaa löytyykö eventistä type "checkbox" etc
-    - ja ota pois formeista formeista
+    - tsekkaa löytyykö eventistä type "checkbox" etc... ja tee oma filu "setValues()"
+      ja ota pois formeista
     - tee Page not found! -sivu
     - Info bubblet
     - Preview sivu
