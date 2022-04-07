@@ -3,20 +3,28 @@
   position: fixed;
   height: 120px;
   background-color: var(--main-white);
+  border: 10px solid var(--main-green-blur);
   margin-top: 30px;
   display: flex;
   justify-content: center;
   transition: 0.2s;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 
 .form-page-nav-block-container {
   display: flex;
-  width: 100%;
-  max-width: 1920px;
   align-self: center;
   justify-content: center;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+.form-page-nav-line {
+  height: 5px;
+  width: 100%;
+  background-color: blue;
+  position: relative;
+  align-self: center;
 }
 
 .form-page-nav-block-container::-webkit-scrollbar {

@@ -8,7 +8,7 @@ const FormPageNavBlock = ({ number, text }) => {
     <Link
       to={`/form/${number}`}
       className="form-page-nav-block"
-      id={param.tab == number ? "selected-tab" : ""}
+      id={param.tab === number.toString() ? "selected-tab" : ""}
     >
       <p>{number}</p>
       <p>{text}</p>

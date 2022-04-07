@@ -1,0 +1,103 @@
+.form-inner-container {
+  margin-top: 50px;
+  width: 80%;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--font-color);
+  align-self: center;
+}
+
+.form-grp {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+.form-grp input,
+.form-grp select {
+  background-color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+  padding-left: 5px;
+  height: 35px;
+  border: 1px solid rgb(189, 188, 188);
+  border-radius: 5px;
+}
+.form-grp textarea {
+  font-weight: 500;
+  padding-left: 5px;
+  font-size: 18px;
+  margin-top: 10px;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgb(189, 188, 188);
+  border-radius: 5px;
+}
+.form-check-grp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-check-grp div input {
+  width: 25px;
+  height: 25px;
+}
+
+.form-check-grp div {
+  display: flex;
+}
+
+.form-check-grp div label {
+  align-self: center;
+}
+
+.form-check-grp-text {
+  padding-left: 5px;
+  margin-bottom: 60px;
+}
+
+.form-horizontal-grp {
+  display: flex;
+  justify-content: space-between;
+}
+.form-horizontal-grp input {
+  width: 40%;
+}
+
+.arrow-icon {
+  align-self: center;
+  font-size: 50px;
+  margin-top: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .form-inner-container {
+    width: 90%;
+    font-size: 18px;
+  }
+
+  .form-check-grp {
+    justify-content: center;
+  }
+  .form-grp label {
+    font-size: 19px;
+    text-align: center;
+  }
+  .form-check-grp div input {
+    width: 20px;
+    height: 20px;
+  }
+
+  .form-check-grp div label {
+    /* font-size: 12px; */
+    font-size: 3vw;
+  }
+  .form-check-grp div {
+    margin: 0 5px;
+  }
+  .arrow-icon {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+}

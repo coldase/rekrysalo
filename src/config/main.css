@@ -1,5 +1,6 @@
 :root {
   --main-green: rgb(145, 180, 140);
+  --main-green-blur: rgba(145, 180, 140, 0.3);
   --main-blue: rgb(90, 128, 164);
   --main-white: rgb(230, 226, 225);
   --nav-dash: rgb(159, 154, 153);

@@ -19,7 +19,7 @@ const FormPageNav = () => {
         <FormPageNavBlock number={6} text="Perehdytys" />
 
         <Link to="/form/7" className="form-page-nav-preview">
-          <AiOutlineCheck id={params.tab == 7 ? "checked" : null} />
+          <AiOutlineCheck id={params.tab === "7" ? "checked" : null} />
         </Link>
       </div>
     </div>

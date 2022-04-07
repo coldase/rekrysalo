@@ -1,0 +1,36 @@
+.form-container {
+  width: 100%;
+  margin-top: 150px;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.form-container::-webkit-scrollbar {
+  display: none;
+}
+
+.form-container2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: var(--main-white);
+  transition: 0.3s;
+  border-radius: 20px;
+  width: 765px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 1000px) {
+  .form-container {
+    margin-top: 100px;
+    /* width: 95%; */
+  }
+  .form-container2 {
+    width: 95%;
+  }
+}

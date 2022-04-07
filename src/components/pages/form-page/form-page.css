@@ -1,5 +1,7 @@
 .form-page-container {
   position: absolute;
+  display: flex;
+  justify-content: center;
   top: 0;
   bottom: 0;
   left: 0;
@@ -7,8 +9,6 @@
   background: url("../../../assets/pics/rekrybg2.png") no-repeat center center
     fixed;
   background-size: cover;
-  /* height: 100%;
-		width: 100%; */
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
