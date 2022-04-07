@@ -9,6 +9,18 @@ import { defaultFormData } from "./data/defaultFormData";
 const App = () => {
   const [formData, setFormData] = useState(defaultFormData);
 
+  useEffect(() => {
+    const getOldData = async () => {
+      const res = await localStorage.getItem("formdata");
+      if (res) {
+        setFormData(JSON.parse(res));
+        console.log("OLD DATA LOADED");
+      }
+    };
+
+    getOldData();
+  }, []);
+
   return (
     <>
       <HashRouter basename="/">
