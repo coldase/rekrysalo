@@ -1,27 +1,78 @@
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
 import "./form.css";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-const Form2 = () => {
+const Form2 = ({ formData, setFormData }) => {
+  const setValues = (e, type = "normal") => {
+    if (type === "check") {
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.checked,
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+      });
+    }
+  };
   return (
     <div className="form-inner-container">
       <form>
         <div className="form-grp">
           <label htmlFor="2-1">Yrityksen sijainti</label>
-          <input type="text" id="2-1" name="2-1" />
+          <input
+            onChange={(e) => setValues(e)}
+            type="text"
+            id="2-1"
+            name="form_2_yrityksen_sijainti"
+            value={
+              formData.form_2_yrityksen_sijainti
+                ? formData.form_2_yrityksen_sijainti
+                : ""
+            }
+          />
         </div>
         <div className="form-check-grp">
           <div>
-            <input type="checkbox" id="2-2-1" name="2-2-1"></input>
+            <input
+              onChange={(e) => setValues(e, "check")}
+              type="checkbox"
+              id="2-2-1"
+              name="form_2_etatyo_tai_monta_sijaintia"
+              checked={
+                formData.form_2_etatyo_tai_monta_sijaintia
+                  ? formData.form_2_etatyo_tai_monta_sijaintia
+                  : ""
+              }
+            ></input>
             <label htmlFor="2-2-1">Etätyö tai monta sijaintia</label>
           </div>
           <div>
-            <input type="checkbox" id="2-2-2" name="2-2-2"></input>
+            <input
+              onChange={(e) => setValues(e, "check")}
+              type="checkbox"
+              id="2-2-2"
+              name="form_2_tyopaikalla_eri_sijainti"
+              checked={
+                formData.form_2_tyopaikalla_eri_sijainti
+                  ? formData.form_2_tyopaikalla_eri_sijainti
+                  : ""
+              }
+            ></input>
             <label htmlFor="2-2-2">Työpaikalla eri sijainti</label>
           </div>
         </div>
         <div className="form-grp">
           <label htmlFor="2-3">Työsopimuksen tyyppi</label>
-          <select name="2-3">
+          <select
+            onChange={(e) => setValues(e)}
+            name="form_2_tyosopimuksen_tyyppi"
+            value={
+              formData.form_2_tyosopimuksen_tyyppi
+                ? formData.form_2_tyosopimuksen_tyyppi
+                : ""
+            }
+          >
             <option disabled>Valitse</option>
             <option value="maaraaikainen">Määräaikainen</option>
             <option value="vakituinen">Vakituinen</option>
@@ -30,49 +81,137 @@ const Form2 = () => {
         </div>
         <div className="form-grp">
           <label htmlFor="2-4">Työaika</label>
-          <select name="2-4">
+          <select
+            onChange={(e) => setValues(e)}
+            name="form_2_tyoaika"
+            value={formData.form_2_tyoaika ? formData.form_2_tyoaika : ""}
+          >
             <option disabled>Valitse</option>
-            <option value="maaraaikainen">Osa-aikainen</option>
-            <option value="vakituinen">Kokoaikainen</option>
+            <option value="osa-aikainen">Osa-aikainen</option>
+            <option value="kokoaikainen">Kokoaikainen</option>
           </select>
         </div>
         <div className="form-grp">
           <label htmlFor="2-5">Tehtävänimike</label>
-          <input type="text" id="2-5" name="2-5" />
+          <input
+            onChange={(e) => setValues(e)}
+            type="text"
+            id="2-5"
+            name="form_2_tehtavanimike"
+            value={
+              formData.form_2_tehtavanimike ? formData.form_2_tehtavanimike : ""
+            }
+          />
         </div>
         <div className="form-grp">
           <label htmlFor="2-6">Yrityksen kuvaus</label>
-          <textarea className="large" id="2-6" name="2-6" />
+          <textarea
+            onChange={(e) => setValues(e)}
+            className="large"
+            id="2-6"
+            name="form_2_yrityksen_kuvaus"
+            value={
+              formData.form_2_yrityksen_kuvaus
+                ? formData.form_2_yrityksen_kuvaus
+                : ""
+            }
+          />
         </div>
         <div className="form-grp">
           <label htmlFor="2-7">Työn kuvaus</label>
-          <textarea id="2-7" name="2-7" />
+          <textarea
+            onChange={(e) => setValues(e)}
+            id="2-7"
+            name="form_2_tyon_kuvaus"
+            value={
+              formData.form_2_tyon_kuvaus ? formData.form_2_tyon_kuvaus : ""
+            }
+          />
         </div>
         <div className="form-grp">
           <label htmlFor="2-8">Ilmoittajan nimi</label>
-          <input type="text" id="2-8" name="2-8" />
+          <input
+            onChange={(e) => setValues(e)}
+            type="text"
+            id="2-8"
+            name="form_2_ilmoittajan_nimi"
+            value={
+              formData.form_2_ilmoittajan_nimi
+                ? formData.form_2_ilmoittajan_nimi
+                : ""
+            }
+          />
         </div>
         <div className="form-grp">
           <label htmlFor="2-9">Hakemusten vastaanotto sähköposti</label>
-          <input type="text" id="2-9" name="2-9" />
+          <input
+            onChange={(e) => setValues(e)}
+            type="text"
+            id="2-9"
+            name="form_2_hakemusten_vastaanotto_sahkoposti"
+            value={
+              formData.form_2_hakemusten_vastaanotto_sahkoposti
+                ? formData.form_2_hakemusten_vastaanotto_sahkoposti
+                : ""
+            }
+          />
         </div>
         <div className="form-grp">
           <label htmlFor="2-10">Ilmoittajan puhelin</label>
-          <input type="text" id="2-10" name="2-10" />
+          <input
+            onChange={(e) => setValues(e)}
+            type="text"
+            id="2-10"
+            name="form_2_ilmoittajan_puhelin"
+            value={
+              formData.form_2_ilmoittajan_puhelin
+                ? formData.form_2_ilmoittajan_puhelin
+                : ""
+            }
+          />
         </div>
 
         <div className="form-grp">
           <label htmlFor="2-11">Julkaisuaika</label>
           <div className="form-horizontal-grp">
-            <input type="date" id="2-11-1" name="2-11-1" />
+            <input
+              onChange={(e) => setValues(e)}
+              type="date"
+              id="2-11-1"
+              name="form_2_julkaisuaika_from"
+              value={
+                formData.form_2_julkaisuaika_from
+                  ? formData.form_2_julkaisuaika_from
+                  : ""
+              }
+            />
             <HiOutlineArrowNarrowRight className="arrow-icon" />
-            <input type="date" id="2-11-2" name="2-11-2" />
+            <input
+              onChange={(e) => setValues(e)}
+              type="date"
+              id="2-11-2"
+              name="form_2_julkaisuaika_to"
+              value={
+                formData.form_2_julkaisuaika_to
+                  ? formData.form_2_julkaisuaika_to
+                  : ""
+              }
+            />
           </div>
         </div>
 
         <div className="form-grp">
           <label htmlFor="2-12">Yhteyshenkilöt ja heidän yhteystiedot</label>
-          <textarea id="2-12" name="2-12" />
+          <textarea
+            onChange={(e) => setValues(e)}
+            id="2-12"
+            name="form_2_yhteyshenkilot_ja_heidan_yhteystiedot"
+            value={
+              formData.form_2_yhteyshenkilot_ja_heidan_yhteystiedot
+                ? formData.form_2_yhteyshenkilot_ja_heidan_yhteystiedot
+                : ""
+            }
+          />
         </div>
       </form>
       <FormNavButtons />

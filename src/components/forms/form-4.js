@@ -1,12 +1,34 @@
 import "./form.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
-const Form4 = () => {
+
+const Form4 = ({ formData, setFormData }) => {
+  const setValues = (e, type = "normal") => {
+    if (type === "check") {
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.checked,
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+      });
+    }
+  };
   return (
     <div className="form-inner-container">
       <form>
         <div className="form-grp">
           <label htmlFor="4-1">Haastattelutyyppi</label>
-          <select name="4-1">
+          <select
+            onChange={(e) => setValues(e)}
+            name="form_4_haastettelutyyppi"
+            value={
+              formData.form_4_haastettelutyyppi
+                ? formData.form_4_haastettelutyyppi
+                : ""
+            }
+          >
             <option disabled>Valitse</option>
             <option value="yksilohaastattelu">Yksilöhaastattelu</option>
             <option value="ryhmahaastattelu">Ryhmähaastattelu</option>
@@ -22,10 +44,18 @@ const Form4 = () => {
           <p>Mikä on suurin saavutuksesi?</p>
         </div>
         <div className="form-grp ">
-          <label htmlFor="4-2">
-            Luonnostele vastaus hylätyille hakemuksille
-          </label>
-          <textarea className="large" id="4-2" name="4-2" />
+          <label htmlFor="4-2">Sunnittele haastattelurunko</label>
+          <textarea
+            className="large"
+            onChange={(e) => setValues(e)}
+            id="4-2"
+            name="form_4_haastattelurunko"
+            value={
+              formData.form_4_haastattelurunko
+                ? formData.form_4_haastattelurunko
+                : ""
+            }
+          />
         </div>
       </form>
       <FormNavButtons />
