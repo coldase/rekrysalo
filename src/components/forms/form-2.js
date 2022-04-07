@@ -42,7 +42,7 @@ const Form2 = () => {
         </div>
         <div className="form-grp">
           <label htmlFor="2-6">Yrityksen kuvaus</label>
-          <textarea id="2-6" name="2-6" />
+          <textarea className="large" id="2-6" name="2-6" />
         </div>
         <div className="form-grp">
           <label htmlFor="2-7">Työn kuvaus</label>
@@ -71,8 +71,8 @@ const Form2 = () => {
         </div>
 
         <div className="form-grp">
-          <label htmlFor="2-7">Yhteyshenkilöt ja heidän yhteystietonsa</label>
-          <textarea id="2-7" name="2-7" />
+          <label htmlFor="2-12">Yhteyshenkilöt ja heidän yhteystiedot</label>
+          <textarea id="2-12" name="2-12" />
         </div>
       </form>
       <FormNavButtons />

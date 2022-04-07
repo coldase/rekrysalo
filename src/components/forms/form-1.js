@@ -7,12 +7,12 @@ const Form1 = () => {
         <div className="form-grp">
           <label htmlFor="1-1">
             Mieti millaista osaamista yrityksesi tarvitsee nyt ja
-            tulevaisuudessa:
+            tulevaisuudessa
           </label>
           <input type="text" id="1-1" name="1-1" />
         </div>
         <div className="form-grp">
-          <label htmlFor="1-2">Arvioi budjetti rekrytoinnille:</label>
+          <label htmlFor="1-2">Arvioi budjetti rekrytoinnille</label>
           <textarea id="1-2" name="1-2" />
         </div>
         <div className="form-grp">
