@@ -10,12 +10,11 @@
 import "./App.css";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-
 import LandingPage from "./components/pages/landing-page/landing-page";
 import FormPage from "./components/pages/form-page/form-page";
 import NotFoundPage from "./components/pages/not-found-page/not-found-page";
-
 import { defaultFormData } from "./data/defaultFormData";
+
 const App = () => {
   const [formData, setFormData] = useState(defaultFormData);
 
@@ -30,10 +29,6 @@ const App = () => {
 
     getOldData();
   }, []);
-
-  useEffect(() => {
-    console.log(formData);
-  }, [formData]);
 
   return (
     <>
