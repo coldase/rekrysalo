@@ -7,6 +7,14 @@ import { useEffect } from "react";
 const FormPage = ({ formData, setFormData }) => {
   const params = useParams();
 
+  const setValues = (e, formData, setFormData) => {
+    setFormData({
+      ...formData,
+      [e.target.name]:
+        e.target.type === "checkbox" ? e.target.checked : e.target.value,
+    });
+  };
+
   useEffect(() => {
     const setLocal = async () => {
       const res = await localStorage.getItem("formdata");
@@ -28,7 +36,10 @@ const FormPage = ({ formData, setFormData }) => {
     <div className="form-page-container">
       <FormPageNav />
 
-      <FormContainer formData={formData} setFormData={setFormData} />
+      <FormContainer
+        formData={formData}
+        setValues={(e) => setValues(e, formData, setFormData)}
+      />
     </div>
   );
 };

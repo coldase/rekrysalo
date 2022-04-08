@@ -1,0 +1,78 @@
+.pagenotfound-container {
+  position: absolute;
+  top: 0;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  background: url("../../../assets/pics/rekrybgbg.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.pagenotfound-content {
+  width: 45%;
+  background-color: var(--main-white);
+  border-radius: 20px;
+  margin-right: 5%;
+  height: 50%;
+  min-width: 670px;
+  max-width: 670px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+}
+
+.pagenotfound-content p {
+  align-self: center;
+  margin: 10px;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--font-color)
+}
+.pagenotfound-content > p:first-child {
+  font-size: 40px
+} 
+
+.pagenotfound-container::-webkit-scrollbar {
+  display: none;
+}
+
+.etusivu-btn {
+  background-color: var(--main-blue);
+  /* width: 50%; */
+  align-self: center;
+  margin-top: 100px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.etusivu-btn:hover{
+  background-color: var(--main-green);
+}
+.etusivu-btn p {
+  
+  margin: 0;
+  font-size: 20px;
+  align-self: center;
+  color: #fff;
+}
+
+@media only screen and (max-width: 770px) {
+  .landingpage-container {
+    /* bottom: 20px; */
+  }
+  .pagenotfound-content {
+    width: 90%;
+    min-width: 0;
+  }
+  
+}

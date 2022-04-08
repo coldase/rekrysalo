@@ -1,21 +1,7 @@
 import "./form.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
 import { useState } from "react";
-const Form1 = ({ formData, setFormData }) => {
-  const setValues = (e, type = "normal") => {
-    if (type === "check") {
-      setFormData({
-        ...formData,
-        [e.target.name]: e.target.checked,
-      });
-    } else {
-      setFormData({
-        ...formData,
-        [e.target.name]: e.target.value,
-      });
-    }
-  };
-
+const Form1 = ({ formData, setValues }) => {
   return (
     <div className="form-inner-container">
       <form>
@@ -56,7 +42,8 @@ const Form1 = ({ formData, setFormData }) => {
         <div className="form-check-grp">
           <div>
             <input
-              onChange={(e) => setValues(e, "check")}
+              onChange={(e) => setValues(e)}
+              // onChange={(e) => console.log(e.target.type)}
               type="checkbox"
               id="1-4-1"
               name="form_1_esimerkki_a"
@@ -66,7 +53,7 @@ const Form1 = ({ formData, setFormData }) => {
           </div>
           <div>
             <input
-              onChange={(e) => setValues(e, "check")}
+              onChange={(e) => setValues(e)}
               type="checkbox"
               id="1-4-2"
               name="form_1_esimerkki_b"

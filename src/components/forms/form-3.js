@@ -1,19 +1,6 @@
 import "./form.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
-const Form3 = ({ formData, setFormData }) => {
-  const setValues = (e, type = "normal") => {
-    if (type === "check") {
-      setFormData({
-        ...formData,
-        [e.target.name]: e.target.checked,
-      });
-    } else {
-      setFormData({
-        ...formData,
-        [e.target.name]: e.target.value,
-      });
-    }
-  };
+const Form3 = ({ formData, setValues }) => {
   return (
     <div className="form-inner-container">
       <form>

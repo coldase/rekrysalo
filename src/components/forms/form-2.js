@@ -1,20 +1,7 @@
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
 import "./form.css";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-const Form2 = ({ formData, setFormData }) => {
-  const setValues = (e, type = "normal") => {
-    if (type === "check") {
-      setFormData({
-        ...formData,
-        [e.target.name]: e.target.checked,
-      });
-    } else {
-      setFormData({
-        ...formData,
-        [e.target.name]: e.target.value,
-      });
-    }
-  };
+const Form2 = ({ formData, setValues }) => {
   return (
     <div className="form-inner-container">
       <form>
