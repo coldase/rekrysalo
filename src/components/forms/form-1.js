@@ -1,6 +1,5 @@
 import "./form.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
-import { useState } from "react";
 const Form1 = ({ formData, setValues }) => {
   return (
     <div className="form-inner-container">

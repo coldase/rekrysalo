@@ -9,6 +9,7 @@
   margin: 30px 20px;
   background-color: var(--main-blue);
   width: 150px;
+  max-width: 150px;
   display: flex;
   justify-content: center;
   border-radius: 5px;
@@ -31,9 +32,11 @@
 
 @media only screen and (max-width: 1000px) {
   .form-nav-button {
-    width: 20vw;
+    width: 25vw;
+    margin: 30px 10px;
   }
   .form-nav-button p {
-    font-size: 2.6vw;
+
+    font-size: 0.75em;
   }
 }

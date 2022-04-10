@@ -111,6 +111,19 @@
   margin-top: 50px;
 }
 
+.preview-container {
+  /* aspect-ratio (A4) => 1:1.4142 */
+  width: 90%;
+  height: 700px;
+  background-color: #fff;
+  margin: auto;
+  margin-bottom: 30px;
+}
+ 
+.vali {
+  height: 30px;
+}
+
 @media only screen and (max-width: 1000px) {
   .form-inner-container {
     width: 90%;
@@ -142,5 +155,10 @@
   }
   .form-normal-grp-text p:first-child {
     text-align: center;
+  }
+
+  .preview-container {
+    height: 110vw;
+    max-height: 700px;
   }
 }

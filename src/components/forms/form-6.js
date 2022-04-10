@@ -9,6 +9,7 @@ const Form6 = ({ formData, setValues }) => {
           Perehdytys on sinulle erittäin hyödyllinen. Hyvä perehdytys varmistaa
           sujuvan työnaloituksen ja säästää aikaasi ja rahaasi.
         </p>
+        <div className="vali"></div>
         <div className="form-grp">
           <label htmlFor="6-1">Varaa tarpeeksi aikaa perehdytystä varten</label>
           <div className="form-horizontal-grp">
@@ -46,6 +47,7 @@ const Form6 = ({ formData, setValues }) => {
         <p>- Pelastusopastus</p>
         <p>- Työterveyshuolto</p>
         <p>- Työturvallisuus</p>
+        <div className="vali"></div>
         <p>Perehdytys on työturvallisuuslain nojalla pakollinen toteuttaa.</p>
       </div>
       <FormNavButtons />

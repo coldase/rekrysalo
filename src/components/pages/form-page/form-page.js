@@ -30,6 +30,7 @@ const FormPage = ({ formData, setFormData }) => {
       }
     };
     setLocal();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [params.tab]);
 
   return (

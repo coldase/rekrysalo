@@ -60,7 +60,7 @@ const Form2 = ({ formData, setValues }) => {
                 : ""
             }
           >
-            <option disabled>Valitse</option>
+            <option default>Valitse</option>
             <option value="maaraaikainen">Määräaikainen</option>
             <option value="vakituinen">Vakituinen</option>
             <option value="harjoittelija">Harjoittelija</option>
@@ -73,7 +73,7 @@ const Form2 = ({ formData, setValues }) => {
             name="form_2_tyoaika"
             value={formData.form_2_tyoaika ? formData.form_2_tyoaika : ""}
           >
-            <option disabled>Valitse</option>
+            <option default>Valitse</option>
             <option value="osa-aikainen">Osa-aikainen</option>
             <option value="kokoaikainen">Kokoaikainen</option>
           </select>
@@ -166,6 +166,7 @@ const Form2 = ({ formData, setValues }) => {
               type="date"
               id="2-11-1"
               name="form_2_julkaisuaika_from"
+              // placeholder="aa/DD/YYYY"
               value={
                 formData.form_2_julkaisuaika_from
                   ? formData.form_2_julkaisuaika_from
