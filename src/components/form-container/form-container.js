@@ -9,7 +9,7 @@ import Form5 from "../forms/form-5";
 import Form6 from "../forms/form-6";
 import Form7 from "../forms/form-7";
 
-const FormContainer = ({ formData, setValues }) => {
+const FormContainer = () => {
   const params = useParams();
 
   const autoScrollTop = () => {
@@ -26,27 +26,13 @@ const FormContainer = ({ formData, setValues }) => {
   return (
     <div className="form-container">
       <div className="form-container2">
-        {params.tab === "1" && (
-          <Form1 formData={formData} setValues={setValues} />
-        )}
-        {params.tab === "2" && (
-          <Form2 formData={formData} setValues={setValues} />
-        )}
-        {params.tab === "3" && (
-          <Form3 formData={formData} setValues={setValues} />
-        )}
-        {params.tab === "4" && (
-          <Form4 formData={formData} setValues={setValues} />
-        )}
-        {params.tab === "5" && (
-          <Form5 formData={formData} setValues={setValues} />
-        )}
-        {params.tab === "6" && (
-          <Form6 formData={formData} setValues={setValues} />
-        )}
-        {params.tab === "7" && (
-          <Form7 formData={formData} setValues={setValues} />
-        )}
+        {params.tab === "1" && <Form1 />}
+        {params.tab === "2" && <Form2 />}
+        {params.tab === "3" && <Form3 />}
+        {params.tab === "4" && <Form4 />}
+        {params.tab === "5" && <Form5 />}
+        {params.tab === "6" && <Form6 />}
+        {params.tab === "7" && <Form7 />}
       </div>
     </div>
   );

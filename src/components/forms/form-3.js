@@ -1,6 +1,10 @@
 import "./form.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
-const Form3 = ({ formData, setValues }) => {
+import { useFormData } from "../../hooks/dataContext";
+
+const Form3 = () => {
+  const [formData, setValues] = useFormData();
+
   return (
     <div className="form-inner-container">
       <form>
