@@ -1,7 +1,7 @@
 import "./form.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import { useFormData } from "../../hooks/dataContext";
+import { useFormData } from "../../hooks/useFormData";
 
 const Form6 = () => {
   const [formData, setValues] = useFormData();

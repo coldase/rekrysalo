@@ -1,12 +1,8 @@
-import { createContext, useContext, useEffect } from "react";
+import { createContext, useEffect } from "react";
 import { useState } from "react";
 import { defaultFormData } from "../data/defaultFormData";
 
 const DataContext = createContext();
-
-const useFormData = () => {
-  return useContext(DataContext);
-};
 
 const DataProvider = ({ children }) => {
   const [formData, setFormData] = useState(defaultFormData);
@@ -25,9 +21,13 @@ const DataProvider = ({ children }) => {
 
   useEffect(() => {
     const getOldData = async () => {
-      const res = await localStorage.getItem("formdata");
-      if (res) {
-        setFormData(JSON.parse(res));
+      try {
+        const res = await localStorage.getItem("formdata");
+        if (res) {
+          setFormData(JSON.parse(res));
+        }
+      } catch (e) {
+        console.log("Cant get data from localStorage");
       }
     };
 
@@ -36,14 +36,18 @@ const DataProvider = ({ children }) => {
 
   useEffect(() => {
     const setLocal = async () => {
-      const res = await localStorage.getItem("formdata");
+      try {
+        const res = await localStorage.getItem("formdata");
 
-      if (res) {
-        if (res !== JSON.stringify(formData)) {
+        if (res) {
+          if (res !== JSON.stringify(formData)) {
+            await localStorage.setItem("formdata", JSON.stringify(formData));
+          }
+        } else {
           await localStorage.setItem("formdata", JSON.stringify(formData));
         }
-      } else {
-        await localStorage.setItem("formdata", JSON.stringify(formData));
+      } catch (e) {
+        console.log("Cant save data to localStorage");
       }
     };
     setLocal();
@@ -56,4 +60,4 @@ const DataProvider = ({ children }) => {
   );
 };
 
-export { DataProvider, useFormData };
+export { DataProvider, DataContext };
