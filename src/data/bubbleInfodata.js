@@ -4,8 +4,8 @@ export const bubbleInfo = {
   form1_1_l: {
     title: "Vinkki",
     content: [
-      "Tekijän löytyminen on helpompaa kun tiedät mitä tarviteset.",
-      "Virhe rekrytointi on suurin vältettävissä oleva menoerä",
+      "Tekijän löytyminen on helpompaa kun tiedät mitä tarvitset.",
+      "Virhe rekrytointi on suurin vältettävissä oleva menoerä.",
     ],
   },
   form1_2_l: {
@@ -36,7 +36,7 @@ export const bubbleInfo = {
   },
   form1_3_r: {
     title: "Ohje",
-    content: "Mieti eri vaiheet ja kuka vastaa mistäkin vaiheesta",
+    content: "Mieti eri vaiheet ja kuka vastaa mistäkin vaiheesta.",
   },
 
   // ### Form 2
@@ -52,29 +52,29 @@ export const bubbleInfo = {
   },
   form2_2_l: {
     title: "Vinkki",
-    content: "Anna tehtävänimikkeeksi mahdollisimman selkeä ja kuvaava nimi",
+    content: "Anna tehtävänimikkeeksi mahdollisimman selkeä ja kuvaava nimi.",
   },
   form2_3_l: {
     title: "Vinkki",
     content: [
-      "Esittele yrityksesi toimintaa lyhyesti. Tiivistä asiat jotka saattavat kiinnostaa hakijoitasi",
-      "Kerro mitä yrityksesi tarjoaa hakijalle",
-      "Älä jaarittele, yritä pitää tekstilohkot lyhyinä",
+      "Esittele yrityksesi toimintaa lyhyesti. Tiivistä asiat jotka saattavat kiinnostaa hakijoitasi.",
+      "Kerro mitä yrityksesi tarjoaa hakijalle.",
+      "Älä jaarittele, yritä pitää tekstilohkot lyhyinä.",
     ],
   },
   form2_4_l: {
     title: "Vinkki",
     content: [
       "Anna mahdollisimman selkeä kuvaus työn sisällöstä.",
-      "Älä jaarittele, yritä pitää tekstilohkot lyhyinä",
+      "Älä jaarittele, yritä pitää tekstilohkot lyhyinä.",
     ],
   },
   form2_5_l: {
     title: "Vinkki",
     content: [
       "Kuvalliset ilmoitukset saavat enemmän huomiota.",
-      "Valitse sellainen kuva joka vahvistaa yrityskuvaasi",
-      "Videon tekeminen kannattaa, jos sinulla on siihen resursseja",
+      "Valitse sellainen kuva joka vahvistaa yrityskuvaasi.",
+      "Videon tekeminen kannattaa, jos sinulla on siihen resursseja.",
     ],
   },
 
@@ -82,7 +82,7 @@ export const bubbleInfo = {
   form2_1_r: {
     title: "Ohje",
     content:
-      "Valitsemalla toisen sijaintivaihtoehdon, saat auki tarkentavia kenttiä",
+      "Valitsemalla toisen sijaintivaihtoehdon, saat auki tarkentavia kenttiä.",
   },
   form2_2_r: {
     title: "Ohje",
@@ -92,16 +92,16 @@ export const bubbleInfo = {
       "- työkokemus",
       "- koulutus",
       "- muut vaatimukset",
-      "Erittele mitä vaadit ja mitä katsot eduksi",
+      "Erittele mitä vaadit ja mitä katsot eduksi.",
     ],
   },
   form2_3_r: {
     title: "Ohje",
-    content: "Mistä mihin asti ilmoituksesi one esillä",
+    content: "Mistä mihin asti ilmoituksesi one esillä.",
   },
   form2_4_r: {
     title: "Ohje",
-    content: "Duunitori: videon resoluutio",
+    content: "Duunitori: videon resoluutio.",
   },
 
   // ## Form 3
@@ -113,7 +113,7 @@ export const bubbleInfo = {
   form3_2_l: {
     title: "Vinkki",
     content: [
-      "Yrityskuvan kannalta on kannattavaa luoda hyvä hakijakokemus",
+      "Yrityskuvan kannalta on kannattavaa luoda hyvä hakijakokemus.",
       "- Vastaa kaikille hakijoille mahdollisimmnan nopeasti",
       "- Ole täsmällinen",
       "- Arvosta hakemuksia",
@@ -125,16 +125,16 @@ export const bubbleInfo = {
   form3_1_r: {
     title: "Ohje",
     content: [
-      "Varmista, että sinulla on aikaa hakijoiden yhteydenotoille",
-      "Anna mahdollisimman joustava aikatauluhaarukka, koska olet tavoitettavissa",
-      "Ja huolehdi, että pidät siitä myös kiinni",
+      "Varmista, että sinulla on aikaa hakijoiden yhteydenotoille.",
+      "Anna mahdollisimman joustava aikatauluhaarukka, koska olet tavoitettavissa.",
+      "Ja huolehdi, että pidät siitä myös kiinni.",
     ],
   },
   form3_2_r: {
     title: "Ohje",
     content: [
-      "Kerro haastateltavalle kenet hän tapaa, missä ja koska",
-      "Kerro myös mitä hänen tulee ottaa mukaan haastatteluun",
+      "Kerro haastateltavalle kenet hän tapaa, missä ja koska.",
+      "Kerro myös mitä hänen tulee ottaa mukaan haastatteluun.",
       "esim. todistukset",
     ],
   },
@@ -144,7 +144,7 @@ export const bubbleInfo = {
   form4_1_l: {
     title: "Vinkki",
     content:
-      "Päätä tärkeimmät kysymykset, jotka tulee kysyttyä jokaiselta, vaiakka itse haastattelut kulkisivat eri tavoilla",
+      "Päätä tärkeimmät kysymykset, jotka tulee kysyttyä jokaiselta, vaiakka itse haastattelut kulkisivat eri tavoilla.",
   },
 
   // Right
@@ -159,7 +159,7 @@ export const bubbleInfo = {
   form5_1_l: {
     title: "Vinkki",
     content:
-      "Sopimuspohjana voit käyttää vaikka seuraavaa työsuojelu.fi löytyvää pohjaa",
+      "Sopimuspohjana voit käyttää vaikka seuraavaa työsuojelu.fi löytyvää pohjaa.",
   },
   form5_1_r: {
     title: "",
@@ -170,13 +170,13 @@ export const bubbleInfo = {
   // Left
   form6_1_l: {
     title: "Vinkki",
-    content: "Lisää tietoa työturvallisuuslaista",
+    content: "Lisää tietoa työturvallisuuslaista.",
   },
   form6_1_r: {
     title: "Ohje",
     content: [
-      "Voit alustavasti varata kalenteriisi aikaa",
-      "Mieti, kuka vastaa perehdytyksestä",
+      "Voit alustavasti varata kalenteriisi aikaa.",
+      "Mieti, kuka vastaa perehdytyksestä.",
     ],
   },
 };
