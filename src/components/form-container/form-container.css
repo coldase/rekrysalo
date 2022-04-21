@@ -7,6 +7,15 @@
   justify-content: center;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  /* background-color: red; */
+
+}
+
+.form-container1 {
+  width: 1500px;
+  display: flex;
+  /* background-color: red; */
+  justify-content: center;
 }
 
 .form-container::-webkit-scrollbar {
@@ -23,7 +32,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  max-width: 765px;
+  /* max-width: 1065px; */
 
 }
 

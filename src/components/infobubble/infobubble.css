@@ -1,0 +1,20 @@
+.infobubble {
+  width: 230px;
+  background-color: var(--main-blue);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #fff;
+}
+
+.infobubble p {
+  margin: 0 0 10px 0;
+}
+
+.infobubble p:first-child {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
