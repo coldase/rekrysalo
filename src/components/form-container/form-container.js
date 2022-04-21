@@ -9,6 +9,8 @@ import Form5 from "../forms/form-5";
 import Form6 from "../forms/form-6";
 import Form7 from "../forms/form-7";
 
+import InfoBubbleContainer from "../infobubble/infobubble-container";
+
 const FormContainer = () => {
   const params = useParams();
 
@@ -25,14 +27,27 @@ const FormContainer = () => {
 
   return (
     <div className="form-container">
-      <div className="form-container2">
-        {params.tab === "1" && <Form1 />}
-        {params.tab === "2" && <Form2 />}
-        {params.tab === "3" && <Form3 />}
-        {params.tab === "4" && <Form4 />}
-        {params.tab === "5" && <Form5 />}
-        {params.tab === "6" && <Form6 />}
-        {params.tab === "7" && <Form7 />}
+      <div className="form-container1">
+        <InfoBubbleContainer type="l" />
+        <div
+          className="form-container2"
+          style={
+            params.tab === "4"
+              ? { height: "800px" }
+              : params.tab === "5" || params.tab === "6"
+              ? { height: "650px" }
+              : null
+          }
+        >
+          {params.tab === "1" && <Form1 />}
+          {params.tab === "2" && <Form2 />}
+          {params.tab === "3" && <Form3 />}
+          {params.tab === "4" && <Form4 />}
+          {params.tab === "5" && <Form5 />}
+          {params.tab === "6" && <Form6 />}
+          {params.tab === "7" && <Form7 />}
+        </div>
+        <InfoBubbleContainer type="r" />
       </div>
     </div>
   );

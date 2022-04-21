@@ -1,4 +1,5 @@
 .form-page-nav-container {
+  z-index: 3;
   width: 100%;
   position: fixed;
   height: 120px;

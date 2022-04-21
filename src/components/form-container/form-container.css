@@ -9,6 +9,12 @@
   scrollbar-width: none;
 }
 
+.form-container1 {
+  width: 1500px;
+  display: flex;
+  justify-content: center;
+}
+
 .form-container::-webkit-scrollbar {
   display: none;
 }
@@ -17,20 +23,18 @@
   margin-top: 50px;
   margin-bottom: 50px;
   background-color: var(--main-white);
-  transition: 0.3s;
   border-radius: 20px;
   width: 765px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  max-width: 765px;
-
+  max-width: 1065px;
 }
 
 @media only screen and (max-width: 1000px) {
   .form-container {
     margin-top: 100px;
-    /* width: 95%; */
+    width: 95%;
   }
   .form-container2 {
     width: 95%;
