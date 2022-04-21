@@ -1,8 +1,12 @@
 import "./infobubble.css";
 
-const InfoBubble = ({ marginB, title, content }) => {
+const InfoBubble = ({ marginB, title, content, isHidden }) => {
   return (
-    <div className="infobubble" style={{ marginBottom: marginB }}>
+    <div
+      className="infobubble"
+      id={isHidden && "hiddedbox"}
+      style={{ marginBottom: marginB }}
+    >
       <p>{title}</p>
       {typeof content === "object" ? (
         <>

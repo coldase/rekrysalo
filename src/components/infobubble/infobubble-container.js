@@ -106,6 +106,105 @@ const InfoBubbleContainer = ({ type }) => {
           )}
         </>
       )}
+      {params.tab === "3" && (
+        <>
+          {type === "l" && (
+            <>
+              <InfoBubble
+                marginB={20}
+                title={bubbleInfo.form3_1_l.title}
+                content={bubbleInfo.form3_1_l.content}
+              />
+              <InfoBubble
+                marginB={20}
+                title={bubbleInfo.form3_2_l.title}
+                content={bubbleInfo.form3_2_l.content}
+              />
+            </>
+          )}
+          {type === "r" && (
+            <>
+              <InfoBubble
+                marginB={20}
+                title={bubbleInfo.form3_1_r.title}
+                content={bubbleInfo.form3_1_r.content}
+              />
+              <InfoBubble
+                marginB={20}
+                title={bubbleInfo.form3_2_r.title}
+                content={bubbleInfo.form3_2_r.content}
+              />
+            </>
+          )}
+        </>
+      )}
+      {params.tab === "4" && (
+        <>
+          {type === "l" && (
+            <>
+              <InfoBubble
+                marginB={20}
+                title={bubbleInfo.form4_1_l.title}
+                content={bubbleInfo.form4_1_l.content}
+              />
+            </>
+          )}
+          {type === "r" && (
+            <>
+              <InfoBubble
+                marginB={20}
+                title={bubbleInfo.form4_1_r.title}
+                content={bubbleInfo.form4_1_r.content}
+              />
+            </>
+          )}
+        </>
+      )}
+      {params.tab === "5" && (
+        <>
+          {type === "l" && (
+            <>
+              <InfoBubble
+                marginB={20}
+                title={bubbleInfo.form5_1_l.title}
+                content={bubbleInfo.form5_1_l.content}
+              />
+            </>
+          )}
+          {type === "r" && (
+            <>
+              <InfoBubble
+                marginB={20}
+                isHidden={true}
+                title={bubbleInfo.form5_1_r.title}
+                content={bubbleInfo.form5_1_r.content}
+              />
+            </>
+          )}
+        </>
+      )}
+      {params.tab === "6" && (
+        <>
+          {type === "l" && (
+            <>
+              <InfoBubble
+                marginB={20}
+                title={bubbleInfo.form6_1_l.title}
+                content={bubbleInfo.form6_1_l.content}
+              />
+            </>
+          )}
+          {type === "r" && (
+            <>
+              <InfoBubble
+                marginB={20}
+                title={bubbleInfo.form6_1_r.title}
+                content={bubbleInfo.form6_1_r.content}
+              />
+            </>
+          )}
+        </>
+      )}
     </div>
   );
 };

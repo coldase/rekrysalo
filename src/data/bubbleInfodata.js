@@ -1,6 +1,5 @@
 export const bubbleInfo = {
   // ### Form 1
-
   // Left
   form1_1_l: {
     title: "Vinkki",
@@ -103,5 +102,81 @@ export const bubbleInfo = {
   form2_4_r: {
     title: "Ohje",
     content: "Duunitori: videon resoluutio",
+  },
+
+  // ## Form 3
+  // Left
+  form3_1_l: {
+    title: "Vinkki",
+    content: "Yrityskuvan kannalta on hyvä vastata kaikille hakijoille.",
+  },
+  form3_2_l: {
+    title: "Vinkki",
+    content: [
+      "Yrityskuvan kannalta on kannattavaa luoda hyvä hakijakokemus",
+      "- Vastaa kaikille hakijoille mahdollisimmnan nopeasti",
+      "- Ole täsmällinen",
+      "- Arvosta hakemuksia",
+      "- Ole kohtelias",
+    ],
+  },
+
+  // Right
+  form3_1_r: {
+    title: "Ohje",
+    content: [
+      "Varmista, että sinulla on aikaa hakijoiden yhteydenotoille",
+      "Anna mahdollisimman joustava aikatauluhaarukka, koska olet tavoitettavissa",
+      "Ja huolehdi, että pidät siitä myös kiinni",
+    ],
+  },
+  form3_2_r: {
+    title: "Ohje",
+    content: [
+      "Kerro haastateltavalle kenet hän tapaa, missä ja koska",
+      "Kerro myös mitä hänen tulee ottaa mukaan haastatteluun",
+      "esim. todistukset",
+    ],
+  },
+
+  // ## Form 4
+  // Left
+  form4_1_l: {
+    title: "Vinkki",
+    content:
+      "Päätä tärkeimmät kysymykset, jotka tulee kysyttyä jokaiselta, vaiakka itse haastattelut kulkisivat eri tavoilla",
+  },
+
+  // Right
+  form4_1_r: {
+    title: "Ohje",
+    content:
+      "Kehitä kysymyksiä , jotka luovat keskustelua. (Vältä kyllä  tai ei vastauksia)",
+  },
+
+  // ## Form 5
+  // Left
+  form5_1_l: {
+    title: "Vinkki",
+    content:
+      "Sopimuspohjana voit käyttää vaikka seuraavaa työsuojelu.fi löytyvää pohjaa",
+  },
+  form5_1_r: {
+    title: "",
+    content: "",
+  },
+
+  // ## Form 6
+  // Left
+  form6_1_l: {
+    title: "Vinkki",
+    content: "Lisää tietoa työturvallisuuslaista",
+  },
+  form6_1_r: {
+    title: "Ohje",
+    content: [
+      "Voit alustavasti varata kalenteriisi aikaa",
+      "Mieti, kuka vastaa perehdytyksestä",
+    ],
   },
 };
