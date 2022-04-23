@@ -29,7 +29,7 @@ const Form4 = () => {
           <p>Muutama esimerkki kysymys:</p>
           <p>Miten kuvailisit itseäsi, entä miten muut kuvailisivat sinua?</p>
           <p>Miksi haet tätä työpaikkaa?</p>
-          <p>Minkälainen on mielestäsi hyväympäristö?</p>
+          <p>Minkälainen on mielestäsi hyvä työympäristö?</p>
           <p>Mitä haluaisit kehittää itsessäsi?</p>
           <p>Mikä on suurin saavutuksesi?</p>
         </div>

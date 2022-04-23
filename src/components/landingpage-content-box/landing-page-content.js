@@ -19,16 +19,13 @@ const LandingPageContent = () => {
         <p>3. Miten valitset sopivat ehdokkaat haastatteluun?</p>
         <p>4. Kuinka valmistaudun työhaastattelun tekemiseen?</p>
         <p>5. Mitä sisältyy työsopimukseen?</p>
-        <p>6. Mitä kuuluu onnistunseeseen perehdytykseen?</p>
+        <p>6. Mitä kuuluu onnistuneeseen perehdytykseen?</p>
       </div>
       <LandingPageNav />
       <div className="landingpage-content-grp3">
         <BsFillExclamationCircleFill className="landingpage-hint-icon" />
         <div className="landingpage-hint-text">
-          <p>
-            Vinkki napin takaa löydät vinkkejä ja neuvoja joita voit lisätä
-            tulostettavalle muistilistalle
-          </p>
+          <p>Vinkki napin takaa löydät vinkkejä ja neuvoja.</p>
         </div>
       </div>
     </div>

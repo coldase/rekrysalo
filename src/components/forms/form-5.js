@@ -14,12 +14,12 @@ const Form5 = () => {
           <span>
             työsopimuslain, työaikalain ja vuosilomalain säädökset, sekä
             työehtosopimuksen määräykset.
-          </span>
+          </span>{" "}
           Mikäli allekirjoitetussa sopimuksessa on sovittu edellämainittujen
           vastaisia asioita, ne eivät ole päteviä.
         </p>
         <p>
-          <span>Työsopimuksen kesto on sovittava.</span>Se voi olla
+          <span>Työsopimuksen kesto on sovittava. </span>Se voi olla
           toistaiseksivoimassa oleva tai määräaikainen.
         </p>
 
