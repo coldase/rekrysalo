@@ -5,7 +5,7 @@ export const bubbleInfo = {
     title: "Vinkki",
     content: [
       "Tekijän löytyminen on helpompaa kun tiedät mitä tarvitset.",
-      "Virhe rekrytointi on suurin vältettävissä oleva menoerä.",
+      "Virherekrytointi on suurin vältettävissä oleva menoerä.",
     ],
   },
   form1_2_l: {
@@ -144,14 +144,16 @@ export const bubbleInfo = {
   form4_1_l: {
     title: "Vinkki",
     content:
-      "Päätä tärkeimmät kysymykset, jotka tulee kysyttyä jokaiselta, vaiakka itse haastattelut kulkisivat eri tavoilla.",
+      "Päätä tärkeimmät kysymykset, jotka tulee kysyttyä jokaiselta, vaikka itse haastattelut kulkisivat eri tavoilla.",
   },
 
   // Right
   form4_1_r: {
     title: "Ohje",
-    content:
-      "Kehitä kysymyksiä , jotka luovat keskustelua. (Vältä kyllä  tai ei vastauksia)",
+    content: [
+      "Kehitä kysymyksiä, jotka luovat keskustelua.",
+      "Vältä kyllä  tai ei vastauksia",
+    ],
   },
 
   // ## Form 5
@@ -159,7 +161,7 @@ export const bubbleInfo = {
   form5_1_l: {
     title: "Vinkki",
     content:
-      "Sopimuspohjana voit käyttää vaikka seuraavaa työsuojelu.fi löytyvää pohjaa.",
+      "Sopimuspohjana voit käyttää vaikka seuraavaa työsuojelu.fi -palvelusta löytyvää pohjaa.",
   },
   form5_1_r: {
     title: "",

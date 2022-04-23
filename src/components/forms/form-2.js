@@ -64,7 +64,7 @@ const Form2 = () => {
                 : ""
             }
           >
-            <option default>Valitse</option>
+            <option disabled>Valitse</option>
             <option value="maaraaikainen">Määräaikainen</option>
             <option value="vakituinen">Vakituinen</option>
             <option value="harjoittelija">Harjoittelija</option>
@@ -77,7 +77,7 @@ const Form2 = () => {
             name="form_2_tyoaika"
             value={formData.form_2_tyoaika ? formData.form_2_tyoaika : ""}
           >
-            <option default>Valitse</option>
+            <option disabled>Valitse</option>
             <option value="osa-aikainen">Osa-aikainen</option>
             <option value="kokoaikainen">Kokoaikainen</option>
           </select>

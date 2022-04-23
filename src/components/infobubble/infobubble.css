@@ -6,6 +6,7 @@
   flex-direction: column;
   padding: 20px;
   color: #fff;
+  transition: 0.5s;
 }
 
 .infobubble p {
@@ -19,5 +20,31 @@
 }
 
 #hiddedbox {
-  background: none;
+  opacity: 0;
+}
+
+.title-container {
+  display: flex;
+}
+
+.l-icon {
+  font-size: 50px;
+  color: var(--main-blue);
+  cursor: pointer;
+  margin-right: -60px;
+  margin-left: 10px;
+  z-index: 1;
+}
+
+.r-icon {
+  font-size: 50px;
+  color: var(--main-blue);
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: -55px;
+  z-index: 1;
+}
+
+.outerbubble {
+  display: flex;
 }
