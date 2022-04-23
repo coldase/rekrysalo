@@ -2,7 +2,6 @@
 
   TODO:
     - Infobubble linkit
-    - Infoiconit
     - Preview sivu
     - Tallenna button?
 
