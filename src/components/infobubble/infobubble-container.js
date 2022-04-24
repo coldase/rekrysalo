@@ -42,6 +42,7 @@ const InfoBubbleContainer = ({ type }) => {
               <InfoBubble
                 marginB={230}
                 type={type}
+                link={bubbleInfo.form1_2_r.link}
                 title={bubbleInfo.form1_2_r.title}
                 content={bubbleInfo.form1_2_r.content}
               />
@@ -193,6 +194,7 @@ const InfoBubbleContainer = ({ type }) => {
               <InfoBubble
                 marginB={20}
                 type={type}
+                link={bubbleInfo.form5_1_l.link}
                 title={bubbleInfo.form5_1_l.title}
                 content={bubbleInfo.form5_1_l.content}
               />
@@ -216,6 +218,7 @@ const InfoBubbleContainer = ({ type }) => {
               <InfoBubble
                 marginB={20}
                 type={type}
+                link={bubbleInfo.form6_1_l.link}
                 title={bubbleInfo.form6_1_l.title}
                 content={bubbleInfo.form6_1_l.content}
               />

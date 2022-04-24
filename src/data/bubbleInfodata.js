@@ -33,6 +33,7 @@ export const bubbleInfo = {
     title: "Ohje",
     content:
       "Linkin takaa löydät palkkalaskurin, jolla pystyt arvioimaan palkkakuluja.",
+    link: "https://www.palkka.fi/palkkalaskuri/Index.htm",
   },
   form1_3_r: {
     title: "Ohje",
@@ -162,7 +163,9 @@ export const bubbleInfo = {
     title: "Vinkki",
     content:
       "Sopimuspohjana voit käyttää vaikka seuraavaa työsuojelu.fi -palvelusta löytyvää pohjaa.",
+    link: "https://www.tyosuojelu.fi/documents/14660/338901/Ty%C3%B6sopimuslomake/20ded5b7-fd41-4f9a-b5b2-6418288f860c",
   },
+
   form5_1_r: {
     title: "",
     content: "",
@@ -173,6 +176,7 @@ export const bubbleInfo = {
   form6_1_l: {
     title: "Vinkki",
     content: "Lisää tietoa työturvallisuuslaista.",
+    link: "https://www.tyoturvallisuus.eu/",
   },
   form6_1_r: {
     title: "Ohje",

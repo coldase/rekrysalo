@@ -5,8 +5,8 @@ import {
 } from "react-icons/bs";
 import { useState } from "react";
 
-const InfoBubble = ({ marginT, marginB, title, content, type }) => {
-  const [isHidden, setIsHidden] = useState(true);
+const InfoBubble = ({ marginT, marginB, title, content, type, link }) => {
+  const [isHidden, setIsHidden] = useState(false);
   return (
     <div className="outerbubble">
       {type === "r" && (
@@ -33,6 +33,7 @@ const InfoBubble = ({ marginT, marginB, title, content, type }) => {
         ) : (
           <p>{content}</p>
         )}
+        {link && <a href={link}>Linkki</a>}
       </div>
       {type === "l" && (
         <BsFillExclamationCircleFill

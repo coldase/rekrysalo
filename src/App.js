@@ -1,7 +1,6 @@
 /*
 
   TODO:
-    - Infobubble linkit
     - Preview sivu
     - Tallenna button?
 
