@@ -25,7 +25,7 @@ const FormNavButtons = () => {
           <p>Tulosta</p>
         </div>
       ) : (
-        <div className="form-nav-button">
+        <div className="form-nav-button" id="hidden-btn">
           <p>Tallenna</p>
         </div>
       )}

@@ -6,7 +6,7 @@ import {
 import { useState } from "react";
 
 const InfoBubble = ({ marginT, marginB, title, content, type, link }) => {
-  const [isHidden, setIsHidden] = useState(false);
+  const [isHidden, setIsHidden] = useState(true);
   return (
     <div className="outerbubble">
       {type === "r" && (

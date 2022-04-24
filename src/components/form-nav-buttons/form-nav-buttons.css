@@ -29,6 +29,11 @@
   background-color: var(--main-green);
 }
 
+#hidden-btn {
+  opacity: 0;
+  cursor: default
+}
+
 @media only screen and (max-width: 1000px) {
   .form-nav-button {
     width: 25vw;
