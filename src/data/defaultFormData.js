@@ -7,6 +7,8 @@ const defaultFormData = {
   form_1_esimerkki_c: false,
   form_1_aikataulutus: "",
 
+  form_2_yrityksen_nimi: "",
+  form_2_ytunnus: "",
   form_2_yrityksen_sijainti: "",
   form_2_etatyo_tai_monta_sijaintia: false,
   form_2_tyopaikalla_eri_sijainti: false,

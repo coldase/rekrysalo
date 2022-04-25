@@ -2,12 +2,12 @@ import "./form-nav-buttons.css";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useFormData } from "../../hooks/useFormData";
-const FormNavButtons = () => {
+const FormNavButtons = ({ handlePrintPdf }) => {
   const params = useParams();
   const [, setFormData] = useFormData();
 
   const handlePrint = () => {
-    setFormData("reset");
+    handlePrintPdf();
   };
 
   return (
@@ -22,21 +22,27 @@ const FormNavButtons = () => {
       </Link>
       {params.tab === "7" ? (
         <div className="form-nav-button" onClick={handlePrint}>
-          <p>Tulosta</p>
+          <p>Lataa PDF</p>
         </div>
       ) : (
         <div className="form-nav-button" id="hidden-btn">
           <p>Tallenna</p>
         </div>
       )}
-      <Link
-        to={
-          parseInt(params.tab) < 7 ? `/form/${parseInt(params.tab) + 1}` : "/"
-        }
-        className="form-nav-button"
-      >
-        <p>Seuraava</p>
-      </Link>
+      {params.tab === "7" ? (
+        <div className="form-nav-button" onClick={() => setFormData("reset")}>
+          <p>Tyhjennä</p>
+        </div>
+      ) : (
+        <Link
+          to={
+            parseInt(params.tab) < 7 ? `/form/${parseInt(params.tab) + 1}` : "/"
+          }
+          className="form-nav-button"
+        >
+          <p>Seuraava</p>
+        </Link>
+      )}
     </div>
   );
 };

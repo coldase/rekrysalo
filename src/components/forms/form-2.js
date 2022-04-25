@@ -10,6 +10,30 @@ const Form2 = () => {
     <div className="form-inner-container">
       <form>
         <div className="form-grp">
+          <label htmlFor="2-0">Yrityksen nimi</label>
+          <input
+            onChange={(e) => setValues(e)}
+            type="text"
+            id="2-0"
+            name="form_2_yrityksen_nimi"
+            value={
+              formData.form_2_yrityksen_nimi
+                ? formData.form_2_yrityksen_nimi
+                : ""
+            }
+          />
+        </div>
+        <div className="form-grp">
+          <label htmlFor="2-0-0">Y-tunnus</label>
+          <input
+            onChange={(e) => setValues(e)}
+            type="text"
+            id="2-0-0"
+            name="form_2_ytunnus"
+            value={formData.form_2_ytunnus ? formData.form_2_ytunnus : ""}
+          />
+        </div>
+        <div className="form-grp">
           <label htmlFor="2-1">Yrityksen sijainti</label>
           <input
             onChange={(e) => setValues(e)}
