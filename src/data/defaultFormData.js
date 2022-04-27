@@ -30,7 +30,7 @@ const defaultFormData = {
   form_3_esimerkki_a: false,
   form_3_esimerkki_b: false,
 
-  form_4_haastettelutyyppi: "",
+  form_4_haastettelutyyppi: "Valitse",
   form_4_haastattelurunko: "",
 
   form_6_perehdytysaika_from: "",

@@ -7,7 +7,6 @@ import {
   StyleSheet,
 } from "@react-pdf/renderer";
 import PDFbg from "../../assets/pics/pdfbg.png";
-import "./test.css";
 
 const styles = StyleSheet.create({
   content: {
@@ -181,7 +180,81 @@ const MyPdf = ({ formData }) => {
           </Text>
         </View>
       </Page>
-      <Page></Page>
+      <Page>
+        <Image src={PDFbg} alt={"bgimage"} style={styles.img}></Image>
+        <View style={styles.content}>
+          <Text style={styles.pageTitleText}>3. Hakemusten käsittely</Text>
+          <Text style={styles.contentTitleText}>
+            Milloin olet tavoitettavissa
+          </Text>
+          <Text style={styles.contentText}>
+            {formData.form_3_milloin_tavoitettavissa
+              ? formData.form_3_milloin_tavoitettavissa
+              : ""}
+          </Text>
+          <Text style={styles.contentTitleText}>
+            Milloin vastaat hakijoille
+          </Text>
+          <Text style={styles.contentText}>
+            {formData.form_3_milloin_vastaat
+              ? formData.form_3_milloin_vastaat
+              : ""}
+          </Text>
+          <Text style={styles.contentTitleText}>Haastettelukutsu luonnos</Text>
+          <Text style={styles.contentText}>
+            {formData.form_3_kutsu_haastatteluun
+              ? formData.form_3_kutsu_haastatteluun
+              : ""}
+          </Text>
+          <Text style={styles.contentTitleText}>
+            Vastaus hylätyille hakemuksille
+          </Text>
+          <Text style={styles.contentText}>
+            {formData.form_3_vastaus_hylatyille_hakemuksille
+              ? formData.form_3_vastaus_hylatyille_hakemuksille
+              : ""}
+          </Text>
+          {formData.form_3_esimerkki_a ? (
+            <Text style={styles.contentText}>
+              Kiitos kiinnostuksestasi työpaikkaa kohtaan, valitettavasti
+              valinta ei juuri nyt osunut kohdallesi.
+            </Text>
+          ) : null}
+          {formData.form_3_esimerkki_b ? (
+            <Text style={styles.contentText}>
+              Hei "Hakijana nimi". Valintakriteerimme eivät tälläkertaa
+              täyttyneet kohdallasi, sillä "Kerro syy".,
+            </Text>
+          ) : null}
+        </View>
+      </Page>
+      <Page>
+        <Image src={PDFbg} alt={"bgimage"} style={styles.img}></Image>
+        <View style={styles.content}>
+          <Text style={styles.pageTitleText}>4. Haastattelu ja perehdytys</Text>
+          <Text style={styles.contentTitleText}>Haastettelutyyppi</Text>
+          <Text style={styles.contentText}>
+            {formData.form_4_haastettelutyyppi !== "Valitse"
+              ? formData.form_4_haastettelutyyppi
+              : ""}
+          </Text>
+          <Text style={styles.contentTitleText}>Haastettelurunko</Text>
+          <Text style={styles.contentText}>
+            {formData.form_4_haastattelurunko
+              ? formData.form_4_haastattelurunko
+              : ""}
+          </Text>
+          <Text style={styles.contentTitleText}>Perehdytys aika</Text>
+          <Text style={styles.contentText}>
+            {formData.form_6_perehdytysaika_from &&
+            formData.form_6_perehdytysaika_to
+              ? formData.form_6_perehdytysaika_from +
+                " - " +
+                formData.form_6_perehdytysaika_to
+              : ""}
+          </Text>
+        </View>
+      </Page>
     </Document>
   );
 };
