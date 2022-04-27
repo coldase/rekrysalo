@@ -21,10 +21,7 @@ const FormNavButtons = () => {
         <p>Edellinen</p>
       </Link>
       {params.tab === "7" ? (
-        <PDFDownloadLink
-          document={<MyPdf formData={formData} />}
-          fileName="testfile"
-        >
+        <PDFDownloadLink document={<MyPdf formData={formData} />}>
           <div className="form-nav-button">
             <p>Lataa PDF</p>
           </div>

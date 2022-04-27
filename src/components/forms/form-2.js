@@ -23,16 +23,7 @@ const Form2 = () => {
             }
           />
         </div>
-        <div className="form-grp">
-          <label htmlFor="2-0-0">Y-tunnus</label>
-          <input
-            onChange={(e) => setValues(e)}
-            type="text"
-            id="2-0-0"
-            name="form_2_ytunnus"
-            value={formData.form_2_ytunnus ? formData.form_2_ytunnus : ""}
-          />
-        </div>
+
         <div className="form-grp">
           <label htmlFor="2-1">Yrityksen sijainti</label>
           <input
@@ -88,7 +79,7 @@ const Form2 = () => {
                 : ""
             }
           >
-            <option disabled>Valitse</option>
+            <option default>Valitse</option>
             <option value="maaraaikainen">Määräaikainen</option>
             <option value="vakituinen">Vakituinen</option>
             <option value="harjoittelija">Harjoittelija</option>
@@ -101,7 +92,7 @@ const Form2 = () => {
             name="form_2_tyoaika"
             value={formData.form_2_tyoaika ? formData.form_2_tyoaika : ""}
           >
-            <option disabled>Valitse</option>
+            <option default>Valitse</option>
             <option value="osa-aikainen">Osa-aikainen</option>
             <option value="kokoaikainen">Kokoaikainen</option>
           </select>
