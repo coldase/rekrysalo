@@ -116,6 +116,25 @@
   height: 30px;
 }
 
+.thumbs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
+
+}
+
+.thumbs-container p {
+  align-self: center;
+  font-size: 50px;
+}
+
+.thumbs-icon {
+  align-self: center;
+  font-size: 200px;
+  color: var(--main-green)
+}
+
 @media only screen and (max-width: 1000px) {
   .form-inner-container {
     width: 90%;

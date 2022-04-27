@@ -21,12 +21,15 @@ const FormNavButtons = () => {
         <p>Edellinen</p>
       </Link>
       {params.tab === "7" ? (
-        <PDFDownloadLink document={<MyPdf formData={formData} />}>
-          <div className="form-nav-button">
-            <p>Lataa PDF</p>
-          </div>
+        // <div className="form-nav-button">
+        <PDFDownloadLink
+          className="form-nav-button"
+          document={<MyPdf formData={formData} />}
+        >
+          <p>Lataa PDF</p>
         </PDFDownloadLink>
       ) : (
+        // </div>
         <div className="form-nav-button" id="hidden-btn">
           <p>Tallenna</p>
         </div>

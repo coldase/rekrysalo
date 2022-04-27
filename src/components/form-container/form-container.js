@@ -34,7 +34,7 @@ const FormContainer = () => {
           style={
             params.tab === "4"
               ? { height: "800px" }
-              : params.tab === "5" || params.tab === "6"
+              : params.tab === "5" || params.tab === "6" || params.tab === "7"
               ? { height: "650px" }
               : null
           }
