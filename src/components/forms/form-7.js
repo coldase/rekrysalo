@@ -1,26 +1,11 @@
 import "./form.css";
 import "./pdf.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
-import { jsPDF } from "jspdf";
 import { useFormData } from "../../hooks/useFormData";
 
 const Form7 = () => {
   const [formData] = useFormData();
 
-  const handlePrintPdf = () => {
-    let doc = new jsPDF("portrait", "pt", "A4");
-    doc.html(document.getElementById("mypdf"), {
-      callback: () => {
-        doc.save(
-          `${
-            formData.form_2_yrityksen_nimi
-              ? formData.form_2_yrityksen_nimi
-              : "default"
-          }_hakemus.pdf`
-        );
-      },
-    });
-  };
   return (
     <div className="form-inner-container">
       <div className="pdf-container" id="mypdf">
@@ -68,7 +53,7 @@ const Form7 = () => {
           </div>
         </div>
       </div>
-      <FormNavButtons handlePrintPdf={handlePrintPdf} />
+      <FormNavButtons />
     </div>
   );
 };
