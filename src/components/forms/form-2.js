@@ -15,6 +15,7 @@ const Form2 = () => {
             onChange={(e) => setValues(e)}
             type="text"
             id="2-0"
+            maxLength={100}
             name="form_2_yrityksen_nimi"
             value={
               formData.form_2_yrityksen_nimi
@@ -28,6 +29,7 @@ const Form2 = () => {
           <label htmlFor="2-1">Yrityksen sijainti</label>
           <input
             onChange={(e) => setValues(e)}
+            maxLength={120}
             type="text"
             id="2-1"
             name="form_2_yrityksen_sijainti"
@@ -104,6 +106,7 @@ const Form2 = () => {
             type="text"
             id="2-5"
             name="form_2_tehtavanimike"
+            maxLength={200}
             value={
               formData.form_2_tehtavanimike ? formData.form_2_tehtavanimike : ""
             }
@@ -114,6 +117,7 @@ const Form2 = () => {
           <textarea
             onChange={(e) => setValues(e)}
             className="large"
+            maxLength={500}
             id="2-6"
             name="form_2_yrityksen_kuvaus"
             value={
@@ -127,6 +131,7 @@ const Form2 = () => {
           <label htmlFor="2-7">Työn kuvaus</label>
           <textarea
             onChange={(e) => setValues(e)}
+            maxLength={500}
             id="2-7"
             name="form_2_tyon_kuvaus"
             value={
@@ -140,6 +145,7 @@ const Form2 = () => {
             onChange={(e) => setValues(e)}
             type="text"
             id="2-8"
+            maxLength={50}
             name="form_2_ilmoittajan_nimi"
             value={
               formData.form_2_ilmoittajan_nimi
@@ -148,26 +154,14 @@ const Form2 = () => {
             }
           />
         </div>
-        <div className="form-grp">
-          <label htmlFor="2-9">Hakemusten vastaanotto sähköposti</label>
-          <input
-            onChange={(e) => setValues(e)}
-            type="text"
-            id="2-9"
-            name="form_2_hakemusten_vastaanotto_sahkoposti"
-            value={
-              formData.form_2_hakemusten_vastaanotto_sahkoposti
-                ? formData.form_2_hakemusten_vastaanotto_sahkoposti
-                : ""
-            }
-          />
-        </div>
+
         <div className="form-grp">
           <label htmlFor="2-10">Ilmoittajan puhelin</label>
           <input
             onChange={(e) => setValues(e)}
             type="text"
             id="2-10"
+            maxLength={20}
             name="form_2_ilmoittajan_puhelin"
             value={
               formData.form_2_ilmoittajan_puhelin
@@ -210,6 +204,7 @@ const Form2 = () => {
         <div className="form-grp">
           <label htmlFor="2-12">Yhteyshenkilöt ja heidän yhteystiedot</label>
           <textarea
+            maxLength={300}
             onChange={(e) => setValues(e)}
             id="2-12"
             name="form_2_yhteyshenkilot_ja_heidan_yhteystiedot"
