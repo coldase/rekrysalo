@@ -15,6 +15,7 @@ const Form3 = () => {
             type="text"
             id="3-1"
             name="form_3_milloin_tavoitettavissa"
+            maxLength={200}
             value={
               formData.form_3_milloin_tavoitettavissa
                 ? formData.form_3_milloin_tavoitettavissa
@@ -25,6 +26,7 @@ const Form3 = () => {
         <div className="form-grp">
           <label htmlFor="3-2">Milloin vastaat hakijoille</label>
           <input
+            maxLength={200}
             onChange={(e) => setValues(e)}
             type="text"
             id="3-2"
@@ -37,9 +39,25 @@ const Form3 = () => {
           />
         </div>
         <div className="form-grp">
-          <label htmlFor="2-3">Luonnostele kutsu haastetteluun</label>
+          <label htmlFor="3-9">Hakemusten vastaanotto sähköposti</label>
+          <input
+            onChange={(e) => setValues(e)}
+            type="text"
+            id="2-9"
+            maxLength={100}
+            name="form_3_hakemusten_vastaanotto_sahkoposti"
+            value={
+              formData.form_3_hakemusten_vastaanotto_sahkoposti
+                ? formData.form_3_hakemusten_vastaanotto_sahkoposti
+                : ""
+            }
+          />
+        </div>
+        <div className="form-grp">
+          <label htmlFor="3-3">Luonnostele kutsu haastetteluun</label>
           <textarea
             onChange={(e) => setValues(e)}
+            maxLength={500}
             id="2-3"
             name="form_3_kutsu_haastatteluun"
             value={
@@ -55,6 +73,7 @@ const Form3 = () => {
           </label>
           <textarea
             onChange={(e) => setValues(e)}
+            maxLength={500}
             id="2-4"
             name="form_3_vastaus_hylatyille_hakemuksille"
             value={
@@ -64,6 +83,7 @@ const Form3 = () => {
             }
           />
         </div>
+
         <div className="form-check-grp">
           <div>
             <input

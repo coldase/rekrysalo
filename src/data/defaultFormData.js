@@ -17,7 +17,6 @@ const defaultFormData = {
   form_2_yrityksen_kuvaus: "",
   form_2_tyon_kuvaus: "",
   form_2_ilmoittajan_nimi: "",
-  form_2_hakemusten_vastaanotto_sahkoposti: "",
   form_2_ilmoittajan_puhelin: "",
   form_2_julkaisuaika_from: "",
   form_2_julkaisuaika_to: "",
@@ -25,6 +24,7 @@ const defaultFormData = {
 
   form_3_milloin_tavoitettavissa: "",
   form_3_milloin_vastaat: "",
+  form_3_hakemusten_vastaanotto_sahkoposti: "",
   form_3_kutsu_haastatteluun: "",
   form_3_vastaus_hylatyille_hakemuksille: "",
   form_3_esimerkki_a: false,

@@ -22,53 +22,55 @@ const styles = StyleSheet.create({
   },
   pageTitleText: {
     color: "rgb(112, 112, 112)",
-    fontSize: 18,
-    marginBottom: 10,
+    fontSize: 13,
+    marginBottom: 12,
   },
   contentTitleText: {
     color: "rgb(112, 112, 112)",
     marginLeft: 20,
     marginTop: 12,
-    fontSize: 15,
+    fontSize: 11,
   },
   contentText: {
+    maxHeight: 150,
     color: "rgb(112, 112, 112)",
     marginLeft: 40,
     marginTop: 5,
-    fontSize: 13,
+    fontSize: 10,
   },
   innerContentText: {
     color: "rgb(112, 112, 112)",
     marginLeft: 60,
     marginTop: 5,
-    fontSize: 10,
-  },
-  dashText: {
-    color: "rgb(112, 112, 112)",
-    marginLeft: 30,
-    marginTop: 5,
-    fontSize: 15,
+    fontSize: 8,
   },
 });
 
 const MyPdf = ({ formData }) => {
   return (
     <Document>
+      {/* PAGE 1 */}
       <Page>
         <Image src={PDFbg} alt={"bgimage"} style={styles.img}></Image>
         <View style={styles.content}>
           <Text style={styles.pageTitleText}>1. Osaamisen tarve</Text>
-          <Text style={styles.contentTitleText}>
-            Millaista osaamista yrityksesi tarvitsee nyt ja tulevaisuudessa
-          </Text>
+          {formData.form_1_osaaminen ? (
+            <Text style={styles.contentTitleText}>
+              Millaista osaamista yrityksesi tarvitsee nyt ja tulevaisuudessa
+            </Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_1_osaaminen ? formData.form_1_osaaminen : ""}
           </Text>
-          <Text style={styles.contentTitleText}>Budjetti rekrytoinnille</Text>
+          {formData.form_1_budjetti ? (
+            <Text style={styles.contentTitleText}>Budjetti rekrytoinnille</Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_1_budjetti ? formData.form_1_budjetti : ""}
           </Text>
-          <Text style={styles.contentTitleText}>Yrityksen tavoitteet</Text>
+          {formData.form_1_tavoitteet ? (
+            <Text style={styles.contentTitleText}>Yrityksen tavoitteet</Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_1_tavoitteet ? formData.form_1_tavoitteet : ""}
           </Text>
@@ -83,23 +85,33 @@ const MyPdf = ({ formData }) => {
           <Text style={styles.contentText}>
             {formData.form_1_esimerkki_b ? "Tuotantomme on kasvussa." : ""}
           </Text>
-          <Text style={styles.contentTitleText}>Aikatauluta rekrytointi</Text>
+          {formData.form_1_aikataulutus ? (
+            <Text style={styles.contentTitleText}>Aikatauluta rekrytointi</Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_1_aikataulutus ? formData.form_1_aikataulutus : ""}
           </Text>
         </View>
       </Page>
+
+      {/* PAGE 2 */}
       <Page>
         <Image src={PDFbg} alt={"bgimage"} style={styles.img}></Image>
         <View style={styles.content}>
           <Text style={styles.pageTitleText}>2. Työpaikkailmoitus</Text>
-          <Text style={styles.contentTitleText}>Yrityksen nimi</Text>
+          {formData.form_2_yrityksen_nimi ? (
+            <Text style={styles.contentTitleText}>Yrityksen nimi</Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_2_yrityksen_nimi
               ? formData.form_2_yrityksen_nimi
               : ""}
           </Text>
-          <Text style={styles.contentTitleText}>Yrityksen sijainti</Text>
+          {formData.form_2_yrityksen_sijainti ||
+          formData.form_2_tyopaikalla_eri_sijainti ||
+          formData.form_2_etatyo_tai_monta_sijaintia ? (
+            <Text style={styles.contentTitleText}>Yrityksen sijainti</Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_2_yrityksen_sijainti
               ? formData.form_2_yrityksen_sijainti
@@ -115,33 +127,48 @@ const MyPdf = ({ formData }) => {
               ? "- Etätyö tai monta sijaintia"
               : ""}
           </Text>
-          <Text style={styles.contentTitleText}>Työsopimuksen tyyppi</Text>
+          {formData.form_2_tyosopimuksen_tyyppi !== "Valitse" ? (
+            <Text style={styles.contentTitleText}>Työsopimuksen tyyppi</Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_2_tyosopimuksen_tyyppi !== "Valitse"
               ? formData.form_2_tyosopimuksen_tyyppi
               : ""}
           </Text>
-          <Text style={styles.contentTitleText}>Työaika</Text>
+          {formData.form_2_tyoaika !== "Valitse" ? (
+            <Text style={styles.contentTitleText}>Työaika</Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_2_tyoaika !== "Valitse"
               ? formData.form_2_tyoaika
               : ""}
           </Text>
-          <Text style={styles.contentTitleText}>Tehtävänimike</Text>
+          {formData.form_2_tehtavanimike ? (
+            <Text style={styles.contentTitleText}>Tehtävänimike</Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_2_tehtavanimike ? formData.form_2_tehtavanimike : ""}
           </Text>
-          <Text style={styles.contentTitleText}>Yrityksen kuvaus</Text>
+          {formData.form_2_yrityksen_kuvaus ? (
+            <Text style={styles.contentTitleText}>Yrityksen kuvaus</Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_2_yrityksen_kuvaus
               ? formData.form_2_yrityksen_kuvaus
               : ""}
           </Text>
-          <Text style={styles.contentTitleText}>Työn kuvaus</Text>
+          {formData.form_2_tyon_kuvaus ? (
+            <Text style={styles.contentTitleText}>Työn kuvaus</Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_2_tyon_kuvaus ? formData.form_2_tyon_kuvaus : ""}
           </Text>
-          <Text style={styles.contentTitleText}>Ilmoittajan yhteystiedot</Text>
+          {formData.form_2_ilmoittajan_nimi ||
+          formData.form_2_ilmoittajan_puhelin ? (
+            <Text style={styles.contentTitleText}>
+              Ilmoittajan yhteystiedot
+            </Text>
+          ) : null}
           {formData.form_2_ilmoittajan_nimi ? (
             <Text style={styles.contentText}>
               {formData.form_2_ilmoittajan_nimi}
@@ -152,15 +179,11 @@ const MyPdf = ({ formData }) => {
               {formData.form_2_ilmoittajan_puhelin}
             </Text>
           ) : null}
-          <Text style={styles.contentTitleText}>
-            Hakemusten vastaanotto sähköposti
-          </Text>
-          <Text style={styles.contentText}>
-            {formData.form_2_hakemusten_vastaanotto_sahkoposti
-              ? formData.form_2_hakemusten_vastaanotto_sahkoposti
-              : ""}
-          </Text>
-          <Text style={styles.contentTitleText}>Julkaisuaika</Text>
+
+          {formData.form_2_julkaisuaika_from &&
+          formData.form_2_julkaisuaika_to ? (
+            <Text style={styles.contentTitleText}>Julkaisuaika</Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_2_julkaisuaika_from &&
             formData.form_2_julkaisuaika_to
@@ -169,46 +192,61 @@ const MyPdf = ({ formData }) => {
                 formData.form_2_julkaisuaika_to
               : ""}
           </Text>
-
-          <Text style={styles.contentTitleText}>
-            Yhteyshenkilöt ja heidän yhteystiedot
-          </Text>
-          <Text style={styles.contentText}>
-            {formData.form_2_yhteyshenkilot_ja_heidan_yhteystiedot
-              ? formData.form_2_yhteyshenkilot_ja_heidan_yhteystiedot
-              : ""}
-          </Text>
         </View>
       </Page>
+
+      {/* PAGE 3 */}
       <Page>
         <Image src={PDFbg} alt={"bgimage"} style={styles.img}></Image>
         <View style={styles.content}>
           <Text style={styles.pageTitleText}>3. Hakemusten käsittely</Text>
-          <Text style={styles.contentTitleText}>
-            Milloin olet tavoitettavissa
+          {formData.form_2_hakemusten_vastaanotto_sahkoposti ? (
+            <Text style={styles.contentTitleText}>
+              Hakemusten vastaanotto sähköposti
+            </Text>
+          ) : null}
+          <Text style={styles.contentText}>
+            {formData.form_2_hakemusten_vastaanotto_sahkoposti
+              ? formData.form_2_hakemusten_vastaanotto_sahkoposti
+              : ""}
           </Text>
+          {formData.form_3_milloin_tavoitettavissa ? (
+            <Text style={styles.contentTitleText}>
+              Milloin olet tavoitettavissa
+            </Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_3_milloin_tavoitettavissa
               ? formData.form_3_milloin_tavoitettavissa
               : ""}
           </Text>
-          <Text style={styles.contentTitleText}>
-            Milloin vastaat hakijoille
-          </Text>
+          {formData.form_3_milloin_vastaat ? (
+            <Text style={styles.contentTitleText}>
+              Milloin vastaat hakijoille
+            </Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_3_milloin_vastaat
               ? formData.form_3_milloin_vastaat
               : ""}
           </Text>
-          <Text style={styles.contentTitleText}>Haastettelukutsu luonnos</Text>
+          {formData.form_3_kutsu_haastatteluun ? (
+            <Text style={styles.contentTitleText}>
+              Haastettelukutsu luonnos
+            </Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_3_kutsu_haastatteluun
               ? formData.form_3_kutsu_haastatteluun
               : ""}
           </Text>
-          <Text style={styles.contentTitleText}>
-            Vastaus hylätyille hakemuksille
-          </Text>
+          {formData.form_3_vastaus_hylatyille_hakemuksille ||
+          formData.form_3_esimerkki_a ||
+          formData.form_3_esimerkki_b ? (
+            <Text style={styles.contentTitleText}>
+              Vastaus hylätyille hakemuksille
+            </Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_3_vastaus_hylatyille_hakemuksille
               ? formData.form_3_vastaus_hylatyille_hakemuksille
@@ -228,29 +266,48 @@ const MyPdf = ({ formData }) => {
           ) : null}
         </View>
       </Page>
+
+      {/* Page 4 */}
       <Page>
         <Image src={PDFbg} alt={"bgimage"} style={styles.img}></Image>
         <View style={styles.content}>
           <Text style={styles.pageTitleText}>4. Haastattelu ja perehdytys</Text>
-          <Text style={styles.contentTitleText}>Haastettelutyyppi</Text>
+          {formData.form_4_haastettelutyyppi !== "Valitse" ? (
+            <Text style={styles.contentTitleText}>Haastettelutyyppi</Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_4_haastettelutyyppi !== "Valitse"
               ? formData.form_4_haastettelutyyppi
               : ""}
           </Text>
-          <Text style={styles.contentTitleText}>Haastettelurunko</Text>
+          {formData.form_4_haastattelurunko ? (
+            <Text style={styles.contentTitleText}>Haastettelurunko</Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_4_haastattelurunko
               ? formData.form_4_haastattelurunko
               : ""}
           </Text>
-          <Text style={styles.contentTitleText}>Perehdytys aika</Text>
+          {formData.form_6_perehdytysaika_from &&
+          formData.form_6_perehdytysaika_to ? (
+            <Text style={styles.contentTitleText}>Perehdytys aika</Text>
+          ) : null}
           <Text style={styles.contentText}>
             {formData.form_6_perehdytysaika_from &&
             formData.form_6_perehdytysaika_to
               ? formData.form_6_perehdytysaika_from +
                 " - " +
                 formData.form_6_perehdytysaika_to
+              : ""}
+          </Text>
+          {formData.form_2_yhteyshenkilot_ja_heidan_yhteystiedot ? (
+            <Text style={styles.contentTitleText}>
+              Yhteyshenkilöt ja heidän yhteystiedot
+            </Text>
+          ) : null}
+          <Text style={styles.contentText}>
+            {formData.form_2_yhteyshenkilot_ja_heidan_yhteystiedot
+              ? formData.form_2_yhteyshenkilot_ja_heidan_yhteystiedot
               : ""}
           </Text>
         </View>

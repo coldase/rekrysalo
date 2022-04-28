@@ -15,6 +15,7 @@ const Form1 = () => {
           </label>
           <input
             onChange={(e) => setValues(e)}
+            maxLength={250}
             type="text"
             id="1-1"
             name="form_1_osaaminen"
@@ -24,6 +25,7 @@ const Form1 = () => {
         <div className="form-grp">
           <label htmlFor="1-2">Arvioi budjetti rekrytoinnille</label>
           <textarea
+            maxLength={400}
             onChange={(e) => setValues(e)}
             id="1-2"
             name="form_1_budjetti"
@@ -36,6 +38,7 @@ const Form1 = () => {
           </label>
           <textarea
             type="text"
+            maxLength={400}
             id="1-3"
             name="form_1_tavoitteet"
             onChange={(e) => setValues(e)}
@@ -90,6 +93,7 @@ const Form1 = () => {
             type="text"
             id="1-5"
             name="form_1_aikataulutus"
+            maxLength={450}
             value={
               formData.form_1_aikataulutus ? formData.form_1_aikataulutus : ""
             }
