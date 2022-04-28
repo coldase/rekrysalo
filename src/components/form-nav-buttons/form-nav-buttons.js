@@ -2,13 +2,13 @@ import "./form-nav-buttons.css";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useFormData } from "../../hooks/useFormData";
-const FormNavButtons = ({ handlePrintPdf }) => {
-  const params = useParams();
-  const [, setFormData] = useFormData();
 
-  const handlePrint = () => {
-    handlePrintPdf();
-  };
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import MyPdf from "../PDF/MyPdf";
+
+const FormNavButtons = () => {
+  const params = useParams();
+  const [formData, setFormData] = useFormData();
 
   return (
     <div className="form-nav-buttons-container">
@@ -21,10 +21,15 @@ const FormNavButtons = ({ handlePrintPdf }) => {
         <p>Edellinen</p>
       </Link>
       {params.tab === "7" ? (
-        <div className="form-nav-button" onClick={handlePrint}>
+        // <div className="form-nav-button">
+        <PDFDownloadLink
+          className="form-nav-button"
+          document={<MyPdf formData={formData} />}
+        >
           <p>Lataa PDF</p>
-        </div>
+        </PDFDownloadLink>
       ) : (
+        // </div>
         <div className="form-nav-button" id="hidden-btn">
           <p>Tallenna</p>
         </div>

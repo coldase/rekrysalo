@@ -19,7 +19,7 @@ const Form4 = () => {
                 : ""
             }
           >
-            <option disabled>Valitse</option>
+            <option default>Valitse</option>
             <option value="yksilohaastattelu">Yksilöhaastattelu</option>
             <option value="ryhmahaastattelu">Ryhmähaastattelu</option>
             <option value="etahaastattelu">Etähaastattelu</option>

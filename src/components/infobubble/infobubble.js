@@ -18,7 +18,7 @@ const InfoBubble = ({ marginT, marginB, title, content, type, link }) => {
       )}
       <div
         className="infobubble"
-        id={isHidden && "hiddedbox"}
+        id={isHidden ? "hiddedbox" : ""}
         style={{ marginBottom: marginB, marginTop: marginT }}
       >
         <div className="title-container">
