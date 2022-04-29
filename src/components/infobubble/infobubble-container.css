@@ -6,12 +6,13 @@
   margin: 100px 30px;
   display: flex;
   flex-direction: column;
+  transition: 0.5s;
 
 }
 
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1400px) {
   .infobubble-container {
     display: none
   }

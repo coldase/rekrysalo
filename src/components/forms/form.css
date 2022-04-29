@@ -121,7 +121,6 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: 100px;
-
 }
 
 .thumbs-container p {
@@ -171,5 +170,12 @@
   .preview-container {
     height: 110vw;
     max-height: 700px;
+  }
+  .thumbs-container p {
+    align-self: center;
+    font-size: 40px;
+  }
+  .thumbs-icon {
+    font-size:150px;
   }
 }

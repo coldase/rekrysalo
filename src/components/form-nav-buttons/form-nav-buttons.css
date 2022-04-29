@@ -44,3 +44,13 @@
     font-size: 0.75em;
   }
 }
+@media only screen and (max-width: 410px) {
+  .form-nav-button {
+    width: 25vw;
+    margin: 30px 10px;
+  }
+  .form-nav-button p {
+
+    font-size: 0.50em;
+  }
+}
