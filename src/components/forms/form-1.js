@@ -1,10 +1,15 @@
 import "./form.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
 import { useFormData } from "../../hooks/useFormData";
+import copy from "copy-to-clipboard";
+import { MdContentCopy } from "react-icons/md";
+import { useState } from "react";
+import Reminder from "./reminder";
 
 const Form1 = () => {
   const [formData, setValues] = useFormData();
 
+  const [currentRadio, setCurrentRadio] = useState("");
   return (
     <div className="form-inner-container">
       <form>
@@ -13,23 +18,14 @@ const Form1 = () => {
             Mieti millaista osaamista yrityksesi tarvitsee nyt ja
             tulevaisuudessa
           </label>
-          <input
+          <textarea
             onChange={(e) => setValues(e)}
             maxLength={250}
             type="text"
             id="1-1"
+            className="large"
             name="form_1_osaaminen"
             value={formData.form_1_osaaminen ? formData.form_1_osaaminen : ""}
-          />
-        </div>
-        <div className="form-grp">
-          <label htmlFor="1-2">Arvioi budjetti rekrytoinnille</label>
-          <textarea
-            maxLength={400}
-            onChange={(e) => setValues(e)}
-            id="1-2"
-            name="form_1_budjetti"
-            value={formData.form_1_budjetti ? formData.form_1_budjetti : ""}
           />
         </div>
         <div className="form-grp">
@@ -37,6 +33,7 @@ const Form1 = () => {
             Pohdi yrityksen lyhyen ja pitkän aikavälin tavoitteet
           </label>
           <textarea
+            className="large"
             type="text"
             maxLength={400}
             id="1-3"
@@ -48,47 +45,50 @@ const Form1 = () => {
         <div className="form-check-grp">
           <div>
             <input
-              onChange={(e) => setValues(e)}
-              // onChange={(e) => console.log(e.target.type)}
-              type="checkbox"
+              onChange={(e) => setCurrentRadio(e.target.value)}
+              type="radio"
               id="1-4-1"
-              name="form_1_esimerkki_a"
-              checked={formData.form_1_esimerkki_a ? true : false}
+              name="form_1_esimerkki"
+              value="Koska yrityksemme tarvitsee uusia asiakkaita, yksi ensivuoden päätavoitteista on uudisasiakashankinta"
             ></input>
             <label htmlFor="1-4-1">Esimerkki A</label>
           </div>
           <div>
             <input
-              onChange={(e) => setValues(e)}
-              type="checkbox"
+              onChange={(e) => setCurrentRadio(e.target.value)}
+              type="radio"
               id="1-4-2"
-              name="form_1_esimerkki_b"
-              checked={formData.form_1_esimerkki_b ? true : false}
+              name="form_1_esimerkki"
+              value="Koska nyt on joulusesonki, tarvitsemme jouluapulaista."
             ></input>
             <label htmlFor="1-4-2">Esimerkki B</label>
           </div>
           <div>
             <input
-              onChange={(e) => setValues(e, "check")}
-              type="checkbox"
+              onChange={(e) => setCurrentRadio(e.target.value)}
+              type="radio"
               id="1-4-3"
-              name="form_1_esimerkki_c"
-              checked={formData.form_1_esimerkki_c ? true : false}
+              name="form_1_esimerkki"
+              value="Tuotantomme on kasvussa"
             ></input>
             <label htmlFor="1-4-3">Esimerkki C</label>
           </div>
         </div>
-        <div className="form-check-grp-text">
-          <p>
-            A. Koska yrityksemme tarvitsee uusia asiakkaita, yksi ensivuoden
-            päätavoitteista on uusi asiakashankinta.
-          </p>
-          <p>B. Koska nyt on joulusesonki, tarvitsemme jouluapulaista.</p>
-          <p>C. Tuotantomme on kasvussa.</p>
-        </div>
+        {currentRadio && (
+          <div className="form-check-grp-text">
+            <div>
+              <MdContentCopy
+                className="copy-icon"
+                onClick={() => copy(currentRadio)}
+              />
+            </div>
+            <p>{currentRadio}</p>
+          </div>
+        )}
         <div className="form-grp">
-          <label htmlFor="1-5">Aikatauluta rekrytointi</label>
+          <label htmlFor="1-5">Aikatauluta rekrytointisi</label>
           <textarea
+            className="large"
             onChange={(e) => setValues(e)}
             type="text"
             id="1-5"
@@ -99,8 +99,20 @@ const Form1 = () => {
             }
           />
         </div>
+        <div className="form-grp">
+          <label htmlFor="1-2">Arvioi budjetti rekrytoinnille</label>
+          <textarea
+            className="large"
+            maxLength={400}
+            onChange={(e) => setValues(e)}
+            id="1-2"
+            name="form_1_budjetti"
+            value={formData.form_1_budjetti ? formData.form_1_budjetti : ""}
+          />
+        </div>
       </form>
       <FormNavButtons />
+      <Reminder />
     </div>
   );
 };

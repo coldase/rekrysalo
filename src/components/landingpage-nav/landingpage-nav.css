@@ -1,7 +1,6 @@
 .landingpage-nav-container {
-  /* background-color: red; */
   height: 80px;
-  margin: 50px 50px 20px 50px;
+  margin: 30px 50px 30px 50px;
   display: flex;
   justify-content: space-between;
 }

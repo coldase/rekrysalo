@@ -1,0 +1,29 @@
+.reminder-container {
+  display: flex;
+  background-color: var(--main-green);
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.reminder-text{
+  color: var(--main-white);
+  font-size: 16px;
+}
+
+.reminder-icon{
+  align-self: center;
+  font-size: 40px;
+  margin-right: 10px;
+  /* padding: 10px; */
+  color: var(--main-blue)
+}
+
+.reminder-icon:first-child {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+/* 
+@media only screen and (max-width: 600px){
+  .reminder-icon {
+  }
+} */
