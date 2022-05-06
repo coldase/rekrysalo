@@ -2,9 +2,6 @@ const defaultFormData = {
   form_1_osaaminen: "",
   form_1_budjetti: "",
   form_1_tavoitteet: "",
-  form_1_esimerkki_a: false,
-  form_1_esimerkki_b: false,
-  form_1_esimerkki_c: false,
   form_1_aikataulutus: "",
 
   form_2_yrityksen_nimi: "",
