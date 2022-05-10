@@ -2,17 +2,24 @@ import "./form.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { useFormData } from "../../hooks/useFormData";
-import { useEffect, useState } from "react";
 import Reminder from "./reminder";
 
 const Form2 = () => {
   const [formData, setValues] = useFormData();
 
-  useEffect(() => {
-    const imp = document.querySelector(".form_2_julkaisuaika_from");
-    const date = new Date();
-    // imp.value = date;
-  }, []);
+  const formatDate = (start) => {
+    const d = new Date();
+    const a = d.getDate();
+    const y = d.getFullYear();
+    if (!start) {
+      const m = d.getMonth() + 1;
+      return `${y}-${m > 9 ? m : "0" + m}-${a > 9 ? a : "0" + a}`;
+    } else {
+      const m = d.getMonth() + 2;
+      return `${y}-${m > 9 ? m : "0" + m}-${a > 9 ? a : "0" + a}`;
+    }
+  };
+
   return (
     <div className="form-inner-container">
       <div className="form-grp" id="form2-header">
@@ -229,24 +236,24 @@ const Form2 = () => {
             <input
               onChange={(e) => setValues(e)}
               type="date"
-              id="2-11-1"
+              id="date1"
               name="form_2_julkaisuaika_from"
               value={
                 formData.form_2_julkaisuaika_from
                   ? formData.form_2_julkaisuaika_from
-                  : ""
+                  : formatDate()
               }
             />
             <HiOutlineArrowNarrowRight className="arrow-icon" />
             <input
               onChange={(e) => setValues(e)}
               type="date"
-              id="2-11-2"
+              id="date2"
               name="form_2_julkaisuaika_to"
               value={
                 formData.form_2_julkaisuaika_to
                   ? formData.form_2_julkaisuaika_to
-                  : ""
+                  : formatDate("1")
               }
             />
           </div>
