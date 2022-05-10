@@ -11,13 +11,16 @@ const DataProvider = ({ children }) => {
     if (e !== "reset") {
       setFormData({
         ...formData,
-        [e.target.name]:
-          e.target.type === "checkbox" ? e.target.checked : e.target.value,
+        [e.target.name]: e.target.value,
       });
     } else {
       setFormData(defaultFormData);
     }
   };
+
+  useEffect(() => {
+    console.log(formData);
+  }, [formData]);
 
   useEffect(() => {
     const getOldData = async () => {

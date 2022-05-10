@@ -38,21 +38,7 @@ const Form3 = () => {
             }
           />
         </div>
-        <div className="form-grp">
-          <label htmlFor="3-9">Hakemusten vastaanotto sähköposti</label>
-          <input
-            onChange={(e) => setValues(e)}
-            type="text"
-            id="2-9"
-            maxLength={100}
-            name="form_3_hakemusten_vastaanotto_sahkoposti"
-            value={
-              formData.form_3_hakemusten_vastaanotto_sahkoposti
-                ? formData.form_3_hakemusten_vastaanotto_sahkoposti
-                : ""
-            }
-          />
-        </div>
+
         <div className="form-grp">
           <label htmlFor="3-3">Luonnostele kutsu haastetteluun</label>
           <textarea
@@ -88,11 +74,11 @@ const Form3 = () => {
           <div>
             <input
               onChange={(e) => setValues(e, "check")}
-              type="checkbox"
+              type="radio"
               id="3-5-1"
-              name="form_3_esimerkki_a"
+              name="form_3_esimerkki"
               checked={
-                formData.form_3_esimerkki_a ? formData.form_3_esimerkki_a : ""
+                formData.form_3_esimerkki ? formData.form_3_esimerkki : ""
               }
             ></input>
             <label htmlFor="3-5-1">Esimerkki A</label>
@@ -100,11 +86,11 @@ const Form3 = () => {
           <div>
             <input
               onChange={(e) => setValues(e, "check")}
-              type="checkbox"
+              type="radio"
               id="3-5-2"
-              name="form_3_esimerkki_b"
+              name="form_3_esimerkki"
               checked={
-                formData.form_3_esimerkki_b ? formData.form_3_esimerkki_b : ""
+                formData.form_3_esimerkki ? formData.form_3_esimerkki : ""
               }
             ></input>
             <label htmlFor="3-5-2">Esimerkki B</label>

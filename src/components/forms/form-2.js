@@ -2,13 +2,17 @@ import "./form.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { useFormData } from "../../hooks/useFormData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Reminder from "./reminder";
 
 const Form2 = () => {
   const [formData, setValues] = useFormData();
-  const [chooseRadio, setChooseRadio] = useState(null);
 
+  useEffect(() => {
+    const imp = document.querySelector(".form_2_julkaisuaika_from");
+    const date = new Date();
+    // imp.value = date;
+  }, []);
   return (
     <div className="form-inner-container">
       <div className="form-grp" id="form2-header">
@@ -46,19 +50,27 @@ const Form2 = () => {
         <div className="form-check-grp">
           <div>
             <input
-              onChange={() => setChooseRadio("1")}
+              onChange={(e) => {
+                setValues(e);
+              }}
               type="radio"
               id="2-2-1"
               name="form_2_radio"
+              value="1"
+              checked={formData.form_2_radio === "1" ? true : false}
             ></input>
             <label htmlFor="2-2-1">Etätyö tai monta sijaintia</label>
           </div>
           <div>
             <input
-              onChange={() => setChooseRadio("2")}
+              onChange={(e) => {
+                setValues(e);
+              }}
               type="radio"
-              id="2-2-2"
+              id="2-2-1"
               name="form_2_radio"
+              value="2"
+              checked={formData.form_2_radio === "2" ? true : false}
             ></input>
             <label htmlFor="2-2-2">
               Työpaikalla eri sijainti kuin yrityksellä
@@ -66,7 +78,7 @@ const Form2 = () => {
           </div>
         </div>
 
-        {chooseRadio === "1" && (
+        {formData.form_2_radio === "1" && (
           <div className="form-grp">
             <label>Etätyön tiedot tai työpaikan sijainnit</label>
 
@@ -77,7 +89,7 @@ const Form2 = () => {
             />
           </div>
         )}
-        {chooseRadio === "2" && (
+        {formData.form_2_radio === "2" && (
           <div className="form-grp">
             <label htmlFor="2-2-3">Työpaikan sijainti</label>
 
@@ -89,6 +101,22 @@ const Form2 = () => {
             />
           </div>
         )}
+        <div className="form-grp">
+          <label htmlFor="2-6">Yrityksen kuvaus</label>
+          <textarea
+            onChange={(e) => setValues(e)}
+            className="large"
+            maxLength={500}
+            id="2-6"
+            name="form_2_yrityksen_kuvaus"
+            value={
+              formData.form_2_yrityksen_kuvaus
+                ? formData.form_2_yrityksen_kuvaus
+                : ""
+            }
+          />
+        </div>
+        <hr />
 
         <div className="form-grp">
           <label htmlFor="2-3">Työsopimuksen tyyppi</label>
@@ -103,7 +131,9 @@ const Form2 = () => {
           >
             <option default>Valitse</option>
             <option value="maaraaikainen">Määräaikainen</option>
-            <option value="vakituinen">Vakituinen</option>
+            <option value="toistaiseksi-voimassaoleva">
+              Toistaiseksi voimassaoleva
+            </option>
             <option value="harjoittelija">Harjoittelija</option>
           </select>
         </div>
@@ -132,21 +162,7 @@ const Form2 = () => {
             }
           />
         </div>
-        <div className="form-grp">
-          <label htmlFor="2-6">Yrityksen kuvaus</label>
-          <textarea
-            onChange={(e) => setValues(e)}
-            className="large"
-            maxLength={500}
-            id="2-6"
-            name="form_2_yrityksen_kuvaus"
-            value={
-              formData.form_2_yrityksen_kuvaus
-                ? formData.form_2_yrityksen_kuvaus
-                : ""
-            }
-          />
-        </div>
+
         <div className="form-grp">
           <label htmlFor="2-7">Työn kuvaus</label>
           <textarea
@@ -159,6 +175,7 @@ const Form2 = () => {
             }
           />
         </div>
+        <hr />
         <div className="form-grp">
           <label htmlFor="2-8">Ilmoittajan nimi</label>
           <input
@@ -192,14 +209,28 @@ const Form2 = () => {
         </div>
 
         <div className="form-grp">
-          <label htmlFor="2-11">Julkaisuaika</label>
+          <label htmlFor="2-9">Hakemusten vastaanotto sähköpostiosoite</label>
+          <input
+            onChange={(e) => setValues(e)}
+            type="text"
+            id="2-9"
+            maxLength={100}
+            name="form_2_hakemusten_vastaanotto_sahkoposti"
+            value={
+              formData.form_2_hakemusten_vastaanotto_sahkoposti
+                ? formData.form_2_hakemusten_vastaanotto_sahkoposti
+                : ""
+            }
+          />
+        </div>
+        <div className="form-grp">
+          <label htmlFor="2-11">Ilmoituksen julkaisuaika</label>
           <div className="form-horizontal-grp">
             <input
               onChange={(e) => setValues(e)}
               type="date"
               id="2-11-1"
               name="form_2_julkaisuaika_from"
-              // placeholder="aa/DD/YYYY"
               value={
                 formData.form_2_julkaisuaika_from
                   ? formData.form_2_julkaisuaika_from
@@ -234,6 +265,13 @@ const Form2 = () => {
                 : ""
             }
           />
+        </div>
+        <hr />
+        <div className="form-grp">
+          <label>
+            Muutaman yleisimmän työnhakusivuston vaatimukset lähetettävän kuvan
+            ja videon suhteen.
+          </label>
         </div>
       </form>
       <FormNavButtons />
