@@ -57,8 +57,27 @@
 }
 
 .form-check-grp-text {
-  padding-left: 5px;
-  margin-bottom: 60px;
+  display: flex;
+  /* margin-left: -30px; */
+
+  /* margin-bottom: 60px; */
+}
+
+.form-check-grp-text div {
+  /* align-self: center; */
+  margin-top: 20px;
+}
+
+.form-check-grp-text  p {
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.copy-icon {
+  font-size: 30px;
+  margin-left: -30px;
+  align-self: center;
+  cursor: pointer;
 }
 
 .form-horizontal-grp {
@@ -77,6 +96,7 @@
 
 .form-normal-grp-text p {
   font-weight: 400;
+  align-self: center;
   margin: 5px 0;
 }
 .form-normal-grp-text p:first-child {
@@ -177,5 +197,9 @@
   }
   .thumbs-icon {
     font-size:150px;
+  }
+
+  .form-check-grp-text {
+    margin-left: 30px;
   }
 }

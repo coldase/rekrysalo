@@ -2,29 +2,15 @@ import "./form.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { useFormData } from "../../hooks/useFormData";
+import { useState } from "react";
 
 const Form2 = () => {
   const [formData, setValues] = useFormData();
+  const [chooseRadio, setChooseRadio] = useState(null);
 
   return (
     <div className="form-inner-container">
       <form>
-        <div className="form-grp">
-          <label htmlFor="2-0">Yrityksen nimi</label>
-          <input
-            onChange={(e) => setValues(e)}
-            type="text"
-            id="2-0"
-            maxLength={100}
-            name="form_2_yrityksen_nimi"
-            value={
-              formData.form_2_yrityksen_nimi
-                ? formData.form_2_yrityksen_nimi
-                : ""
-            }
-          />
-        </div>
-
         <div className="form-grp">
           <label htmlFor="2-1">Yrityksen sijainti</label>
           <input
@@ -44,30 +30,22 @@ const Form2 = () => {
           <div>
             <input
               onChange={(e) => setValues(e, "check")}
-              type="checkbox"
+              type="radio"
               id="2-2-1"
-              name="form_2_etatyo_tai_monta_sijaintia"
-              checked={
-                formData.form_2_etatyo_tai_monta_sijaintia
-                  ? formData.form_2_etatyo_tai_monta_sijaintia
-                  : ""
-              }
+              name="form_2_radio"
             ></input>
             <label htmlFor="2-2-1">Etätyö tai monta sijaintia</label>
           </div>
           <div>
             <input
               onChange={(e) => setValues(e, "check")}
-              type="checkbox"
+              type="radio"
               id="2-2-2"
-              name="form_2_tyopaikalla_eri_sijainti"
-              checked={
-                formData.form_2_tyopaikalla_eri_sijainti
-                  ? formData.form_2_tyopaikalla_eri_sijainti
-                  : ""
-              }
+              name="form_2_radio"
             ></input>
-            <label htmlFor="2-2-2">Työpaikalla eri sijainti</label>
+            <label htmlFor="2-2-2">
+              Työpaikalla eri sijainti kuin yrityksellä
+            </label>
           </div>
         </div>
         <div className="form-grp">

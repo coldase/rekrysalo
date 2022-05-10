@@ -1,6 +1,9 @@
 import "./landing-page-content.css";
 import LandingPageNav from "../landingpage-nav/landingpage-nav";
-import { BsFillExclamationCircleFill } from "react-icons/bs";
+import {
+  BsFillExclamationCircleFill,
+  BsFillQuestionCircleFill,
+} from "react-icons/bs";
 
 const LandingPageContent = () => {
   return (
@@ -24,8 +27,9 @@ const LandingPageContent = () => {
       <LandingPageNav />
       <div className="landingpage-content-grp3">
         <BsFillExclamationCircleFill className="landingpage-hint-icon" />
+        <BsFillQuestionCircleFill className="landingpage-hint-icon" />
         <div className="landingpage-hint-text">
-          <p>Vinkki napin takaa löydät vinkkejä ja neuvoja.</p>
+          <p>Vinkki- ja ohjenappien takaa löydät vinkkejä ja neuvoja.</p>
         </div>
       </div>
     </div>
