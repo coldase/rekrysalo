@@ -1,5 +1,10 @@
+hr {
+  opacity: 0.3;
+  margin: 40px auto;
+}
+
 .form-inner-container {
-  margin-top: 50px;
+  margin-top: 20px;
   width: 80%;
   font-size: 20px;
   font-weight: 600;
@@ -11,6 +16,10 @@
   display: flex;
   flex-direction: column;
   margin: 30px 0;
+}
+
+.form-grp label {
+  font-weight: 400;
 }
 
 .form-grp input,
@@ -36,16 +45,17 @@
 }
 
 .large {
-  height: 150px !important;
+  height: 200px !important;
 }
 .form-check-grp {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .form-check-grp div input {
   width: 25px;
   height: 25px;
+  margin: 0 10px;
 }
 
 .form-check-grp div {
@@ -54,23 +64,21 @@
 
 .form-check-grp div label {
   align-self: center;
+  font-weight: 400;
 }
+
 
 .form-check-grp-text {
   display: flex;
-  /* margin-left: -30px; */
-
-  /* margin-bottom: 60px; */
 }
 
 .form-check-grp-text div {
-  /* align-self: center; */
   margin-top: 20px;
 }
 
 .form-check-grp-text  p {
   margin-left: 10px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .copy-icon {
@@ -86,6 +94,32 @@
 }
 .form-horizontal-grp input {
   width: 40%;
+}
+
+.form-horizontal-grp2 {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.image-info-block {
+  margin: 10px;
+  max-width: 250px;
+  min-width: 250px;
+  height: 300px;
+  background-color: none;
+  border-radius: 10px;
+}
+
+.image-info-block img {
+  width: 100%;
+  height: 100%;
+  size: cover;
+  background-color: none;
+  border-radius: 10px;
 }
 
 .arrow-icon {
@@ -136,6 +170,14 @@
   height: 30px;
 }
 
+.vali-ilmoitus {
+  color: var(--main-blue);
+  font-size: 23px;
+  font-weight: 400;
+  margin-top: 70px;
+  text-align: center;
+}
+
 .thumbs-container {
   display: flex;
   flex-direction: column;
@@ -152,6 +194,29 @@
   align-self: center;
   font-size: 200px;
   color: var(--main-green)
+}
+
+#form2-header p{
+  margin: 0;
+  
+}
+
+#form2-header p:last-child {
+  color: var(--main-blue);
+}
+
+#form2-header p:last-child a{
+  color: var(--main-blue);
+  color: var(--main-blue);
+  margin-top: 10px;
+}
+
+.form-4-toggle-esimerkit-container {
+  display: flex;
+}
+
+.form-4-toggle-esimerkit-container input {
+  align-self: center;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -198,7 +263,9 @@
   .thumbs-icon {
     font-size:150px;
   }
-
+  .vali-ilmoitus {
+    text-align: center;
+  }
   .form-check-grp-text {
     margin-left: 30px;
   }

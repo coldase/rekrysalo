@@ -5,7 +5,6 @@
     - Tallenna button?
     - form 1 bottom "vinkki napin takaa löydät..."
     - form 2 top "suosituimmat työpaikkojen..."
-    - form 2 bottom kuvanlataus
     
 */
 
