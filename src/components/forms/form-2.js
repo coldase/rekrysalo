@@ -5,6 +5,7 @@ import { useFormData } from "../../hooks/useFormData";
 import Reminder from "./reminder";
 import OikotiePic from "../../assets/pics/oikotie.png";
 import DuunitoriPic from "../../assets/pics/duunitori.png";
+
 const Form2 = () => {
   const [formData, setValues] = useFormData();
 

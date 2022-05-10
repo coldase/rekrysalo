@@ -45,16 +45,17 @@ hr {
 }
 
 .large {
-  height: 150px !important;
+  height: 200px !important;
 }
 .form-check-grp {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .form-check-grp div input {
   width: 25px;
   height: 25px;
+  margin: 0 10px;
 }
 
 .form-check-grp div {
@@ -77,7 +78,7 @@ hr {
 
 .form-check-grp-text  p {
   margin-left: 10px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .copy-icon {
@@ -169,6 +170,14 @@ hr {
   height: 30px;
 }
 
+.vali-ilmoitus {
+  color: var(--main-blue);
+  font-size: 23px;
+  font-weight: 400;
+  margin-top: 70px;
+  text-align: center;
+}
+
 .thumbs-container {
   display: flex;
   flex-direction: column;
@@ -246,7 +255,9 @@ hr {
   .thumbs-icon {
     font-size:150px;
   }
-
+  .vali-ilmoitus {
+    text-align: center;
+  }
   .form-check-grp-text {
     margin-left: 30px;
   }

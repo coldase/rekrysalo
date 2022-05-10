@@ -1,9 +1,14 @@
 import "./form.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
 import { useFormData } from "../../hooks/useFormData";
+import Reminder from "./reminder";
+import { useState } from "react";
+import copy from "copy-to-clipboard";
+import { MdContentCopy } from "react-icons/md";
 
 const Form3 = () => {
   const [formData, setValues] = useFormData();
+  const [currentRadio, setCurrentRadio] = useState("");
 
   return (
     <div className="form-inner-container">
@@ -39,9 +44,14 @@ const Form3 = () => {
           />
         </div>
 
+        <p className="vali-ilmoitus">
+          Soittaminen on paras tapa kutsua henkilö haastetteluun!
+        </p>
+
         <div className="form-grp">
           <label htmlFor="3-3">Luonnostele kutsu haastetteluun</label>
           <textarea
+            className="large"
             onChange={(e) => setValues(e)}
             maxLength={500}
             id="2-3"
@@ -58,6 +68,7 @@ const Form3 = () => {
             Luonnostele vastaus hylätyille hakemuksille
           </label>
           <textarea
+            className="large"
             onChange={(e) => setValues(e)}
             maxLength={500}
             id="2-4"
@@ -73,41 +84,40 @@ const Form3 = () => {
         <div className="form-check-grp">
           <div>
             <input
-              onChange={(e) => setValues(e, "check")}
+              onChange={(e) => setCurrentRadio(e.target.value)}
               type="radio"
               id="3-5-1"
               name="form_3_esimerkki"
-              checked={
-                formData.form_3_esimerkki ? formData.form_3_esimerkki : ""
-              }
+              value="Kiitos kiinnostuksestasi työpaikkaa kohtaan. Valitettavasti valinta ei osunut sinuun."
             ></input>
             <label htmlFor="3-5-1">Esimerkki A</label>
           </div>
           <div>
             <input
-              onChange={(e) => setValues(e, "check")}
+              onChange={(e) => setCurrentRadio(e.target.value)}
               type="radio"
               id="3-5-2"
               name="form_3_esimerkki"
-              checked={
-                formData.form_3_esimerkki ? formData.form_3_esimerkki : ""
-              }
+              value='Hei "Hakijan nimi". Valintakriteerimme ei tällä kertaa täyttynyt kohdallasi, sillä "kerro syy".'
             ></input>
             <label htmlFor="3-5-2">Esimerkki B</label>
           </div>
         </div>
-        <div className="form-check-grp-text">
-          <p>
-            A. Kiitos kiinnostuksestasi työpaikkaa kohtaan, valitettavasti
-            valinta ei nyt osunut kohdallesi.
-          </p>
-          <p>
-            B. Hei "Hakijan nimi". Valintakriteerimme eivät tälläkertaa
-            täyttyneet kohdallasi, sillä "kerro syy".
-          </p>
-        </div>
+        {currentRadio && (
+          <div className="form-check-grp-text">
+            <div>
+              <MdContentCopy
+                title="Copy text"
+                className="copy-icon"
+                onClick={() => copy(currentRadio)}
+              />
+            </div>
+            <p>{currentRadio}</p>
+          </div>
+        )}
       </form>
       <FormNavButtons />
+      <Reminder />
     </div>
   );
 };

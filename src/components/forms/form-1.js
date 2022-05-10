@@ -78,6 +78,7 @@ const Form1 = () => {
           <div className="form-check-grp-text">
             <div>
               <MdContentCopy
+                title="Copy text"
                 className="copy-icon"
                 onClick={() => copy(currentRadio)}
               />
