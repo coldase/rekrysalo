@@ -1,5 +1,5 @@
 .form-inner-container {
-  margin-top: 50px;
+  margin-top: 20px;
   width: 80%;
   font-size: 20px;
   font-weight: 600;
@@ -11,6 +11,10 @@
   display: flex;
   flex-direction: column;
   margin: 30px 0;
+}
+
+.form-grp label {
+  font-weight: 400;
 }
 
 .form-grp input,
@@ -54,17 +58,15 @@
 
 .form-check-grp div label {
   align-self: center;
+  font-weight: 400;
+
 }
 
 .form-check-grp-text {
   display: flex;
-  /* margin-left: -30px; */
-
-  /* margin-bottom: 60px; */
 }
 
 .form-check-grp-text div {
-  /* align-self: center; */
   margin-top: 20px;
 }
 
@@ -152,6 +154,21 @@
   align-self: center;
   font-size: 200px;
   color: var(--main-green)
+}
+
+#form2-header p{
+  margin: 0;
+  
+}
+
+#form2-header p:last-child {
+  color: var(--main-blue);
+}
+
+#form2-header p:last-child a{
+  color: var(--main-blue);
+  color: var(--main-blue);
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 1000px) {

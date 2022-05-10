@@ -3,6 +3,7 @@ import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { useFormData } from "../../hooks/useFormData";
 import { useState } from "react";
+import Reminder from "./reminder";
 
 const Form2 = () => {
   const [formData, setValues] = useFormData();
@@ -10,6 +11,22 @@ const Form2 = () => {
 
   return (
     <div className="form-inner-container">
+      <div className="form-grp" id="form2-header">
+        <p>Suosituimmat työpaikkojen hakukoneet</p>
+        <p>
+          <a href="https://te-palvelut.fi" target="_blank" rel="noreferrer">
+            TE-palvelut
+          </a>
+          ,{" "}
+          <a href="https://duunitori.fi/" target="_blank" rel="noreferrer">
+            Duunitori
+          </a>
+          ,{" "}
+          <a href="https://oikotie.fi/" target="_blank" rel="noreferrer">
+            Oikotie
+          </a>
+        </p>
+      </div>
       <form>
         <div className="form-grp">
           <label htmlFor="2-1">Yrityksen sijainti</label>
@@ -29,7 +46,7 @@ const Form2 = () => {
         <div className="form-check-grp">
           <div>
             <input
-              onChange={(e) => setValues(e, "check")}
+              onChange={() => setChooseRadio("1")}
               type="radio"
               id="2-2-1"
               name="form_2_radio"
@@ -38,7 +55,7 @@ const Form2 = () => {
           </div>
           <div>
             <input
-              onChange={(e) => setValues(e, "check")}
+              onChange={() => setChooseRadio("2")}
               type="radio"
               id="2-2-2"
               name="form_2_radio"
@@ -48,6 +65,31 @@ const Form2 = () => {
             </label>
           </div>
         </div>
+
+        {chooseRadio === "1" && (
+          <div className="form-grp">
+            <label>Etätyön tiedot tai työpaikan sijainnit</label>
+
+            <textarea
+              onChange={(e) => setValues(e)}
+              maxLength={500}
+              name="form_2_eta_tyo_tai_tyopaikan_sijainti"
+            />
+          </div>
+        )}
+        {chooseRadio === "2" && (
+          <div className="form-grp">
+            <label htmlFor="2-2-3">Työpaikan sijainti</label>
+
+            <input
+              onChange={(e) => setValues(e)}
+              maxLength={500}
+              id="2-7"
+              name="form_2_tyopaikan_sijainti"
+            />
+          </div>
+        )}
+
         <div className="form-grp">
           <label htmlFor="2-3">Työsopimuksen tyyppi</label>
           <select
@@ -195,6 +237,7 @@ const Form2 = () => {
         </div>
       </form>
       <FormNavButtons />
+      <Reminder />
     </div>
   );
 };
