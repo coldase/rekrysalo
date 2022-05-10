@@ -3,21 +3,20 @@ import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { useFormData } from "../../hooks/useFormData";
 import Reminder from "./reminder";
-
+import OikotiePic from "../../assets/pics/oikotie.png";
+import DuunitoriPic from "../../assets/pics/duunitori.png";
 const Form2 = () => {
   const [formData, setValues] = useFormData();
 
   const formatDate = (start) => {
     const d = new Date();
+    if (start) {
+      d.setMonth(d.getMonth() + 1);
+    }
     const a = d.getDate();
     const y = d.getFullYear();
-    if (!start) {
-      const m = d.getMonth() + 1;
-      return `${y}-${m > 9 ? m : "0" + m}-${a > 9 ? a : "0" + a}`;
-    } else {
-      const m = d.getMonth() + 2;
-      return `${y}-${m > 9 ? m : "0" + m}-${a > 9 ? a : "0" + a}`;
-    }
+    const m = d.getMonth() + 1;
+    return `${y}-${m > 9 ? m : "0" + m}-${a > 9 ? a : "0" + a}`;
   };
 
   return (
@@ -262,6 +261,7 @@ const Form2 = () => {
         <div className="form-grp">
           <label htmlFor="2-12">Yhteyshenkilöt ja heidän yhteystiedot</label>
           <textarea
+            className="large"
             maxLength={300}
             onChange={(e) => setValues(e)}
             id="2-12"
@@ -279,6 +279,14 @@ const Form2 = () => {
             Muutaman yleisimmän työnhakusivuston vaatimukset lähetettävän kuvan
             ja videon suhteen.
           </label>
+        </div>
+        <div className="form-horizontal-grp2">
+          <div className="image-info-block">
+            <img src={DuunitoriPic} alt="Oikotie" />
+          </div>
+          <div className="image-info-block">
+            <img src={OikotiePic} alt="Oikotie" />
+          </div>
         </div>
       </form>
       <FormNavButtons />
