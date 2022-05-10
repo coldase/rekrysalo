@@ -1,9 +1,12 @@
 import "./form.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
 import { useFormData } from "../../hooks/useFormData";
+import Reminder from "./reminder";
+import { useState } from "react";
 
 const Form4 = () => {
   const [formData, setValues] = useFormData();
+  const [showEsimerkit, setShowEsimerkit] = useState(false);
 
   return (
     <div className="form-inner-container">
@@ -25,14 +28,7 @@ const Form4 = () => {
             <option value="etahaastattelu">Etähaastattelu</option>
           </select>
         </div>
-        <div className="form-normal-grp-text">
-          <p>Muutama esimerkki kysymys:</p>
-          <p>Miten kuvailisit itseäsi, entä miten muut kuvailisivat sinua?</p>
-          <p>Miksi haet tätä työpaikkaa?</p>
-          <p>Minkälainen on mielestäsi hyvä työympäristö?</p>
-          <p>Mitä haluaisit kehittää itsessäsi?</p>
-          <p>Mikä on suurin saavutuksesi?</p>
-        </div>
+
         <div className="form-grp ">
           <label htmlFor="4-2">Sunnittele haastattelurunko</label>
           <textarea
@@ -48,8 +44,23 @@ const Form4 = () => {
             }
           />
         </div>
+        <div className="form-grp">
+          <div className="toggle-esimerkit">
+            <input type="checkbox"></input>
+            <label>Esimerkki kysymyksiä</label>
+          </div>
+          <div className="form-normal-grp-text">
+            <p>Muutama esimerkki kysymys:</p>
+            <p>Miten kuvailisit itseäsi, entä miten muut kuvailisivat sinua?</p>
+            <p>Miksi haet tätä työpaikkaa?</p>
+            <p>Minkälainen on mielestäsi hyvä työympäristö?</p>
+            <p>Mitä haluaisit kehittää itsessäsi?</p>
+            <p>Mikä on suurin saavutuksesi?</p>
+          </div>
+        </div>
       </form>
       <FormNavButtons />
+      <Reminder />
     </div>
   );
 };

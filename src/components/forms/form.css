@@ -65,8 +65,8 @@ hr {
 .form-check-grp div label {
   align-self: center;
   font-weight: 400;
-
 }
+
 
 .form-check-grp-text {
   display: flex;
@@ -209,6 +209,14 @@ hr {
   color: var(--main-blue);
   color: var(--main-blue);
   margin-top: 10px;
+}
+
+.form-4-toggle-esimerkit-container {
+  display: flex;
+}
+
+.form-4-toggle-esimerkit-container input {
+  align-self: center;
 }
 
 @media only screen and (max-width: 1000px) {
