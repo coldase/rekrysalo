@@ -33,7 +33,11 @@ const InfoBubble = ({ marginT, marginB, title, content, type, link }) => {
         ) : (
           <p>{content}</p>
         )}
-        {link && <a href={link}>Linkki</a>}
+        {link && (
+          <a href={link[1]} target="_blank" rel="noreferrer">
+            {link[0]}
+          </a>
+        )}
       </div>
       {type === "l" && (
         <BsFillExclamationCircleFill
