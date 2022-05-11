@@ -18,7 +18,10 @@ const FormNavButtons = () => {
         <p>Edellinen</p>
       </Link>
       {params.tab === "7" ? (
-        <div className="form-nav-button">
+        <div
+          className="form-nav-button"
+          onClick={() => alert("Under development")}
+        >
           <p>Lataa PDF</p>
         </div>
       ) : null}
