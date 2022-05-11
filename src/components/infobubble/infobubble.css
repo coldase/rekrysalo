@@ -1,5 +1,5 @@
 .infobubble {
-  width: 230px;
+  width: 180px;
   background-color: var(--main-blue);
   border-radius: 10px;
   display: flex;
@@ -9,8 +9,13 @@
   transition: 0.5s;
 }
 
+.infobubble a {
+  color: var(--main-green)
+}
+
 .infobubble p {
   margin: 0 0 10px 0;
+  font-size: 15px;
 }
 
 .infobubble p:first-child {

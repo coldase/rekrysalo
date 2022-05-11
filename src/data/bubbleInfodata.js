@@ -4,18 +4,18 @@ export const bubbleInfo = {
   form1_1_l: {
     title: "Vinkki",
     content: [
-      "Tekijän löytyminen on helpompaa kun tiedät mitä tarvitset.",
+      "Tekijän löytäminen on helpompaa kun tiedät mitä tarvitset.",
       "Virherekrytointi on suurin vältettävissä oleva menoerä.",
     ],
   },
-  form1_2_l: {
+  form1_3_l: {
     title: "Vinkki",
     content: [
       "Vastavalmistunut tai vastaava on aluksi halvempi palkattava, tosin perehdytys vie alkuun siivun tuottavuudesta.",
       "Kokenut osaaja taas voi tuoda yritykselle nopeammin suurempia tuloja, mutta on kalliimpi palkattava.",
     ],
   },
-  form1_3_l: {
+  form1_2_l: {
     title: "Vinkki",
     content: [
       "Varaa rekrytointiin tarpeeksi aikaa.",
@@ -31,13 +31,18 @@ export const bubbleInfo = {
   },
   form1_2_r: {
     title: "Ohje",
-    content:
-      "Linkin takaa löydät palkkalaskurin, jolla pystyt arvioimaan palkkakuluja.",
-    link: "https://www.palkka.fi/palkkalaskuri/Index.htm",
+    content: [
+      "Mieti eri vaiheet ja kuka vastaa mistäkin vaiheesta.",
+      "Voit kopioida esimerkkivastauksen itsellesi.",
+    ],
   },
   form1_3_r: {
     title: "Ohje",
-    content: "Mieti eri vaiheet ja kuka vastaa mistäkin vaiheesta.",
+    content: [
+      "Voit kopioida esimerkkivastauksen itsellesi.",
+      "Linkin takaa löydät palkkalaskurin, jolla pystyt arvioimaan palkkakuluja.",
+    ],
+    link: ["Palkkalaskuri", "https://www.palkka.fi/palkkalaskuri/Index.htm"],
   },
 
   // ### Form 2

@@ -2,6 +2,7 @@ import "./form.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { useFormData } from "../../hooks/useFormData";
+import Reminder from "./reminder";
 
 const Form6 = () => {
   const [formData, setValues] = useFormData();
@@ -55,6 +56,7 @@ const Form6 = () => {
         <p>Perehdytys on työturvallisuuslain nojalla pakollinen toteuttaa.</p>
       </div>
       <FormNavButtons />
+      <Reminder />
     </div>
   );
 };

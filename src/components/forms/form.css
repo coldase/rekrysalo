@@ -4,7 +4,7 @@ hr {
 }
 
 .form-inner-container {
-  margin-top: 20px;
+  margin-top: 10px;
   width: 80%;
   font-size: 20px;
   font-weight: 600;
@@ -213,12 +213,20 @@ hr {
 
 .form-4-toggle-esimerkit-container {
   display: flex;
+  /* background-color: red; */
 }
 
 .form-4-toggle-esimerkit-container input {
   align-self: center;
+  /* height: 30px; */
+  width: 20px;
 }
 
+.form-4-toggle-esimerkit-container label {
+  align-self: center;
+  margin-left: 10px;
+  margin-top: 5px;
+}
 @media only screen and (max-width: 1000px) {
   .form-inner-container {
     width: 90%;

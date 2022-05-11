@@ -12,19 +12,19 @@ const InfoBubbleContainer = ({ type }) => {
           {type === "l" && (
             <>
               <InfoBubble
-                marginB={80}
+                marginB={400}
                 type={type}
                 title={bubbleInfo.form1_1_l.title}
                 content={bubbleInfo.form1_1_l.content}
               />
               <InfoBubble
                 type={type}
-                marginB={80}
+                marginB={30}
                 title={bubbleInfo.form1_2_l.title}
                 content={bubbleInfo.form1_2_l.content}
               />
               <InfoBubble
-                marginB={20}
+                marginB={0}
                 type={type}
                 title={bubbleInfo.form1_3_l.title}
                 content={bubbleInfo.form1_3_l.content}
@@ -34,21 +34,21 @@ const InfoBubbleContainer = ({ type }) => {
           {type === "r" && (
             <>
               <InfoBubble
-                marginB={60}
+                marginB={465}
                 type={type}
                 title={bubbleInfo.form1_1_r.title}
                 content={bubbleInfo.form1_1_r.content}
               />
               <InfoBubble
-                marginB={230}
+                marginB={90}
                 type={type}
-                link={bubbleInfo.form1_2_r.link}
                 title={bubbleInfo.form1_2_r.title}
                 content={bubbleInfo.form1_2_r.content}
               />
               <InfoBubble
-                marginB={20}
+                marginB={0}
                 type={type}
+                link={bubbleInfo.form1_3_r.link}
                 title={bubbleInfo.form1_3_r.title}
                 content={bubbleInfo.form1_3_r.content}
               />
