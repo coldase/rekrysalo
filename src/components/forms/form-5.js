@@ -1,12 +1,13 @@
 import "./form.css";
 import FormNavButtons from "../form-nav-buttons/form-nav-buttons";
+import Reminder from "./reminder";
 const Form5 = () => {
   return (
     <div className="form-inner-container">
       <div className="form-normal2-grp-text">
         <p>
-          Työsopimus voi olla kirjallinen, suullinen tai sähköinen. On{" "}
-          <span>suositeltavaa tehdä kirjallisesti</span>, jotta sovitut asiat
+          Työsopimus voi olla kirjallinen, suullinen tai sähköinen.{" "}
+          <span>On suositeltavaa tehdä kirjallisesti</span>, jotta sovitut asiat
           voidaan tarvittaessa tarkistaa.
         </p>
         <p>
@@ -15,6 +16,8 @@ const Form5 = () => {
             työsopimuslain, työaikalain ja vuosilomalain säädökset, sekä
             työehtosopimuksen määräykset.
           </span>{" "}
+        </p>
+        <p>
           Mikäli allekirjoitetussa sopimuksessa on sovittu edellämainittujen
           vastaisia asioita, ne eivät ole päteviä.
         </p>
@@ -30,6 +33,7 @@ const Form5 = () => {
         </p>
       </div>
       <FormNavButtons />
+      <Reminder />
     </div>
   );
 };

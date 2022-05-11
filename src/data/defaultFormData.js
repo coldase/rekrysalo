@@ -28,6 +28,7 @@ const defaultFormData = {
 
   form_4_haastettelutyyppi: "Valitse",
   form_4_haastattelurunko: "",
+  form_4_showEsimerkit: false,
 
   form_6_perehdytysaika_from: "",
   form_6_perehdytysaika_to: "",

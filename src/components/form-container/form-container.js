@@ -31,15 +31,7 @@ const FormContainer = () => {
         <InfoBubbleContainer type="l" />
         <div
           className="form-container2"
-          style={
-            params.tab === "4"
-              ? { height: "800px" }
-              : params.tab === "5" || params.tab === "6"
-              ? { height: "800px" }
-              : params.tab === "7"
-              ? { height: "630px" }
-              : null
-          }
+          style={params.tab === "7" ? { height: "630px" } : null}
         >
           {params.tab === "1" && <Form1 />}
           {params.tab === "2" && <Form2 />}
