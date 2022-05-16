@@ -225,22 +225,32 @@ const InfoBubbleContainer = ({ type }) => {
           {type === "l" && (
             <>
               <InfoBubble
-                marginB={20}
+                marginB={125}
                 type={type}
                 link={bubbleInfo.form6_1_l.link}
                 title={bubbleInfo.form6_1_l.title}
                 content={bubbleInfo.form6_1_l.content}
+              />
+              <InfoBubble
+                type={type}
+                link={bubbleInfo.form6_2_l.link}
+                title={bubbleInfo.form6_2_l.title}
+                content={bubbleInfo.form6_2_l.content}
               />
             </>
           )}
           {type === "r" && (
             <>
               <InfoBubble
-                marginT={130}
                 marginB={20}
                 type={type}
                 title={bubbleInfo.form6_1_r.title}
                 content={bubbleInfo.form6_1_r.content}
+              />
+              <InfoBubble
+                type={type}
+                title={bubbleInfo.form6_2_r.title}
+                content={bubbleInfo.form6_2_r.content}
               />
             </>
           )}

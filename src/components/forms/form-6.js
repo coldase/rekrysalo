@@ -19,9 +19,11 @@ const Form6 = () => {
         <p>- Pelastusopastus</p>
         <p>- Työterveyshuolto</p>
         <p>- Työturvallisuus</p>
-        <p>Perehdytys on työturvallisuuslain nojalla pakollinen toteuttaa.</p>
       </div>
-      <div className="vali"></div>
+      <p>
+        Säästät vaivaa tulevaisuudessa, tekemällä perehdytyskansion jo
+        ensimmäisen rekrytoinnin kohdalla.
+      </p>
       <FormNavButtons />
       <Reminder />
     </div>

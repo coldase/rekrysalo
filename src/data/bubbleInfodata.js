@@ -186,11 +186,23 @@ export const bubbleInfo = {
     content: "Lisää tietoa työturvallisuuslaista.",
     link: ["Työturvallisuus", "https://www.tyoturvallisuus.eu/"],
   },
+  form6_2_l: {
+    title: "Vinkki",
+    content: [
+      "Perehdytyskansio on infopaketti yrityksesi uudelle työntekijälle",
+      "Perehdytyskantion pohjan löydät täältä:",
+    ],
+    link: ["Perehdytyspohja", "https://www.perehdytysopas.fi/"],
+  },
+
+  // Right
   form6_1_r: {
     title: "Ohje",
-    content: [
-      "Voit alustavasti varata kalenteriisi aikaa.",
-      "Mieti, kuka vastaa perehdytyksestä.",
-    ],
+    content: "Mieti, kuka vastaa perehdytyksestä.",
+  },
+
+  form6_2_r: {
+    title: "Ohje",
+    content: "Perehdytys on työturvallisuuslain nojalla pakollinen toteuttaa",
   },
 };
