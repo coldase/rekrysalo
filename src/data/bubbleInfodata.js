@@ -184,7 +184,7 @@ export const bubbleInfo = {
   form6_1_l: {
     title: "Vinkki",
     content: "Lisää tietoa työturvallisuuslaista.",
-    link: "https://www.tyoturvallisuus.eu/",
+    link: ["Työturvallisuus", "https://www.tyoturvallisuus.eu/"],
   },
   form6_1_r: {
     title: "Ohje",
