@@ -47,6 +47,10 @@ hr {
 .large {
   height: 200px !important;
 }
+
+.larger {
+  height: 350px !important;
+}
 .form-check-grp {
   display: flex;
   justify-content: center;

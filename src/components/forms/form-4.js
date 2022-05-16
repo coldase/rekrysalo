@@ -14,13 +14,18 @@ const Form4 = () => {
           <select
             onChange={(e) => setValues(e)}
             name="form_4_haastettelutyyppi"
+            onFocus={() =>
+              document.getElementById("valitse3").setAttribute("disabled", true)
+            }
             value={
               formData.form_4_haastettelutyyppi
                 ? formData.form_4_haastettelutyyppi
                 : ""
             }
           >
-            <option default>Valitse</option>
+            <option id="valitse3" default>
+              Valitse
+            </option>
             <option value="yksilohaastattelu">Yksilöhaastattelu</option>
             <option value="ryhmahaastattelu">Ryhmähaastattelu</option>
             <option value="etahaastattelu">Etähaastattelu</option>
@@ -30,7 +35,7 @@ const Form4 = () => {
         <div className="form-grp ">
           <label htmlFor="4-2">Sunnittele haastattelurunko</label>
           <textarea
-            className="large"
+            className="larger"
             maxLength={1000}
             onChange={(e) => setValues(e)}
             id="4-2"

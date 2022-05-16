@@ -9,17 +9,6 @@ import DuunitoriPic from "../../assets/pics/duunitori.png";
 const Form2 = () => {
   const [formData, setValues] = useFormData();
 
-  const formatDate = (start) => {
-    const d = new Date();
-    if (start) {
-      d.setMonth(d.getMonth() + 1);
-    }
-    const a = d.getDate();
-    const y = d.getFullYear();
-    const m = d.getMonth() + 1;
-    return `${y}-${m > 9 ? m : "0" + m}-${a > 9 ? a : "0" + a}`;
-  };
-
   return (
     <div className="form-inner-container">
       <div className="form-grp" id="form2-header">
@@ -92,7 +81,12 @@ const Form2 = () => {
             <textarea
               onChange={(e) => setValues(e)}
               maxLength={500}
-              name="form_2_eta_tyo_tai_tyopaikan_sijainti"
+              name="form_2_eta_tyo_tai_monta_sijaintia"
+              value={
+                formData.form_2_eta_tyo_tai_monta_sijaintia
+                  ? formData.form_2_eta_tyo_tai_monta_sijaintia
+                  : ""
+              }
             />
           </div>
         )}
@@ -105,6 +99,11 @@ const Form2 = () => {
               maxLength={500}
               id="2-7"
               name="form_2_tyopaikan_sijainti"
+              value={
+                formData.form_2_tyopaikan_sijainti
+                  ? formData.form_2_tyopaikan_sijainti
+                  : ""
+              }
             />
           </div>
         )}
@@ -129,6 +128,9 @@ const Form2 = () => {
           <label htmlFor="2-3">Työsopimuksen tyyppi</label>
           <select
             onChange={(e) => setValues(e)}
+            onFocus={() =>
+              document.getElementById("valitse").setAttribute("disabled", true)
+            }
             name="form_2_tyosopimuksen_tyyppi"
             value={
               formData.form_2_tyosopimuksen_tyyppi
@@ -136,7 +138,9 @@ const Form2 = () => {
                 : ""
             }
           >
-            <option default>Valitse</option>
+            <option id="valitse" default>
+              Valitse
+            </option>
             <option value="maaraaikainen">Määräaikainen</option>
             <option value="toistaiseksi-voimassaoleva">
               Toistaiseksi voimassaoleva
@@ -148,10 +152,15 @@ const Form2 = () => {
           <label htmlFor="2-4">Työaika</label>
           <select
             onChange={(e) => setValues(e)}
+            onFocus={() =>
+              document.getElementById("valitse2").setAttribute("disabled", true)
+            }
             name="form_2_tyoaika"
             value={formData.form_2_tyoaika ? formData.form_2_tyoaika : ""}
           >
-            <option default>Valitse</option>
+            <option id="valitse2" default>
+              Valitse
+            </option>
             <option value="osa-aikainen">Osa-aikainen</option>
             <option value="kokoaikainen">Kokoaikainen</option>
           </select>
@@ -241,7 +250,7 @@ const Form2 = () => {
               value={
                 formData.form_2_julkaisuaika_from
                   ? formData.form_2_julkaisuaika_from
-                  : formatDate()
+                  : ""
               }
             />
             <HiOutlineArrowNarrowRight className="arrow-icon" />
@@ -253,7 +262,7 @@ const Form2 = () => {
               value={
                 formData.form_2_julkaisuaika_to
                   ? formData.form_2_julkaisuaika_to
-                  : formatDate("1")
+                  : ""
               }
             />
           </div>

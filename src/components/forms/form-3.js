@@ -98,7 +98,7 @@ const Form3 = () => {
               type="radio"
               id="3-5-2"
               name="form_3_esimerkki"
-              value='Hei "Hakijan nimi". Valintakriteerimme ei tällä kertaa täyttynyt kohdallasi, sillä "kerro syy".'
+              value="Hei 'Hakijan nimi'. Valintakriteerimme ei tällä kertaa täyttynyt kohdallasi, sillä 'kerro syy'."
             ></input>
             <label htmlFor="3-5-2">Esimerkki B</label>
           </div>

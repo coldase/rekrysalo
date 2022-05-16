@@ -19,7 +19,7 @@ const Form5 = () => {
         </p>
         <p>
           Mikäli allekirjoitetussa sopimuksessa on sovittu edellämainittujen
-          vastaisia asioita, ne eivät ole päteviä.
+          vastaisia asioita, ne <span>eivät</span> ole päteviä.
         </p>
         <p>
           <span>Työsopimuksen kesto on sovittava. </span>Se voi olla
