@@ -20,10 +20,6 @@ const DataProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    console.log(formData);
-  }, [formData]);
-
-  useEffect(() => {
     const getOldData = async () => {
       try {
         const res = await localStorage.getItem("formdata");

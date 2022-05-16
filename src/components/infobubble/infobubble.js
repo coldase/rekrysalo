@@ -5,10 +5,10 @@ import {
 } from "react-icons/bs";
 import { useState } from "react";
 
-const InfoBubble = ({ marginT, marginB, title, content, type, link }) => {
+const InfoBubble = ({ marginT, marginB, title, content, type, link, hide }) => {
   const [isHidden, setIsHidden] = useState(true);
   return (
-    <div className="outerbubble">
+    <div className="outerbubble" style={hide && { opacity: 0 }}>
       {type === "r" && (
         <BsFillQuestionCircleFill
           style={{ marginBottom: marginB, marginTop: marginT }}

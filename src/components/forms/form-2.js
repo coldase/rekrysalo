@@ -180,10 +180,11 @@ const Form2 = () => {
         </div>
 
         <div className="form-grp">
-          <label htmlFor="2-7">Työn kuvaus</label>
+          <label htmlFor="2-7">Työnkuvaus</label>
           <textarea
             onChange={(e) => setValues(e)}
             maxLength={500}
+            className="large"
             id="2-7"
             name="form_2_tyon_kuvaus"
             value={

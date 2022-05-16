@@ -2,9 +2,12 @@ import "./infobubble-container.css";
 import InfoBubble from "./infobubble";
 import { useParams } from "react-router-dom";
 import { bubbleInfo } from "../../data/bubbleInfodata.js";
+import { useFormData } from "../../hooks/useFormData";
 
 const InfoBubbleContainer = ({ type }) => {
   const params = useParams();
+  const [formData] = useFormData();
+
   return (
     <div className="infobubble-container">
       {params.tab === "1" && (
@@ -61,25 +64,31 @@ const InfoBubbleContainer = ({ type }) => {
           {type === "l" && (
             <>
               <InfoBubble
-                marginB={100}
+                marginB={
+                  formData.form_2_radio === "1"
+                    ? 250
+                    : formData.form_2_radio === "2"
+                    ? 150
+                    : 50
+                }
                 type={type}
                 title={bubbleInfo.form2_1_l.title}
                 content={bubbleInfo.form2_1_l.content}
               />
               <InfoBubble
-                marginB={50}
-                type={type}
-                title={bubbleInfo.form2_2_l.title}
-                content={bubbleInfo.form2_2_l.content}
-              />
-              <InfoBubble
-                marginB={60}
+                marginB={250}
                 type={type}
                 title={bubbleInfo.form2_3_l.title}
                 content={bubbleInfo.form2_3_l.content}
               />
               <InfoBubble
-                marginB={410}
+                marginB={10}
+                type={type}
+                title={bubbleInfo.form2_2_l.title}
+                content={bubbleInfo.form2_2_l.content}
+              />
+              <InfoBubble
+                marginB={800}
                 type={type}
                 title={bubbleInfo.form2_4_l.title}
                 content={bubbleInfo.form2_4_l.content}
@@ -95,14 +104,20 @@ const InfoBubbleContainer = ({ type }) => {
           {type === "r" && (
             <>
               <InfoBubble
-                marginT={60}
-                marginB={320}
+                marginT={90}
+                marginB={
+                  formData.form_2_radio === "1"
+                    ? 895
+                    : formData.form_2_radio === "2"
+                    ? 795
+                    : 695
+                }
                 type={type}
                 title={bubbleInfo.form2_1_r.title}
                 content={bubbleInfo.form2_1_r.content}
               />
               <InfoBubble
-                marginB={430}
+                marginB={320}
                 type={type}
                 title={bubbleInfo.form2_2_r.title}
                 content={bubbleInfo.form2_2_r.content}
@@ -113,12 +128,6 @@ const InfoBubbleContainer = ({ type }) => {
                 title={bubbleInfo.form2_3_r.title}
                 content={bubbleInfo.form2_3_r.content}
               />
-              <InfoBubble
-                marginB={20}
-                type={type}
-                title={bubbleInfo.form2_4_r.title}
-                content={bubbleInfo.form2_4_r.content}
-              />
             </>
           )}
         </>
@@ -128,14 +137,13 @@ const InfoBubbleContainer = ({ type }) => {
           {type === "l" && (
             <>
               <InfoBubble
-                marginT={50}
+                marginT={20}
+                marginB={170}
                 type={type}
-                marginB={80}
                 title={bubbleInfo.form3_1_l.title}
                 content={bubbleInfo.form3_1_l.content}
               />
               <InfoBubble
-                marginB={20}
                 type={type}
                 title={bubbleInfo.form3_2_l.title}
                 content={bubbleInfo.form3_2_l.content}
@@ -145,14 +153,13 @@ const InfoBubbleContainer = ({ type }) => {
           {type === "r" && (
             <>
               <InfoBubble
-                marginT={50}
+                marginT={20}
                 type={type}
-                marginB={50}
+                marginB={40}
                 title={bubbleInfo.form3_1_r.title}
                 content={bubbleInfo.form3_1_r.content}
               />
               <InfoBubble
-                marginB={20}
                 type={type}
                 title={bubbleInfo.form3_2_r.title}
                 content={bubbleInfo.form3_2_r.content}
@@ -204,6 +211,8 @@ const InfoBubbleContainer = ({ type }) => {
             <>
               <InfoBubble
                 marginB={20}
+                type={type}
+                hide={true}
                 title={bubbleInfo.form5_1_r.title}
                 content={bubbleInfo.form5_1_r.content}
               />

@@ -103,7 +103,7 @@ export const bubbleInfo = {
   },
   form2_3_r: {
     title: "Ohje",
-    content: "Mistä mihin asti ilmoituksesi one esillä.",
+    content: "Mistä mihin asti ilmoituksesi on esillä.",
   },
   form2_4_r: {
     title: "Ohje",

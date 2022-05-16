@@ -7,6 +7,8 @@ const defaultFormData = {
   form_1_budjetti: "",
 
   form_2_yrityksen_sijainti: "",
+
+  form_2_radio: "",
   form_2_eta_tyo_tai_monta_sijaintia: "",
   form_2_tyopaikan_sijainti: "",
   form_2_yrityksen_kuvaus: "",
