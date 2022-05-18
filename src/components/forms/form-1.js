@@ -20,7 +20,7 @@ const Form1 = () => {
           </label>
           <textarea
             onChange={(e) => setValues(e)}
-            maxLength={250}
+            maxLength={550}
             type="text"
             id="1-1"
             className="large"

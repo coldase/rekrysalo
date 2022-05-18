@@ -2,10 +2,11 @@ import "./form-nav-buttons.css";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useFormData } from "../../hooks/useFormData";
+import { handlePdf } from "../pdfcontainer/pdfcontainer";
 
 const FormNavButtons = () => {
   const params = useParams();
-  const [, setFormData] = useFormData();
+  const [formData, setFormData] = useFormData();
 
   return (
     <div className="form-nav-buttons-container">
@@ -18,10 +19,7 @@ const FormNavButtons = () => {
         <p>Edellinen</p>
       </Link>
       {params.tab === "7" ? (
-        <div
-          className="form-nav-button"
-          onClick={() => alert("Under development")}
-        >
+        <div className="form-nav-button" onClick={() => handlePdf(formData)}>
           <p>Lataa PDF</p>
         </div>
       ) : null}
