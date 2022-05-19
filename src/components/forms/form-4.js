@@ -36,7 +36,7 @@ const Form4 = () => {
           <label htmlFor="4-2">Sunnittele haastattelurunko</label>
           <textarea
             className="larger"
-            maxLength={1000}
+            maxLength={1200}
             onChange={(e) => setValues(e)}
             id="4-2"
             name="form_4_haastattelurunko"

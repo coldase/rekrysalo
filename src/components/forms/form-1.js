@@ -35,7 +35,7 @@ const Form1 = () => {
           <textarea
             className="large"
             type="text"
-            maxLength={400}
+            maxLength={550}
             id="1-3"
             name="form_1_tavoitteet"
             onChange={(e) => setValues(e)}
@@ -94,7 +94,7 @@ const Form1 = () => {
             type="text"
             id="1-5"
             name="form_1_aikataulutus"
-            maxLength={450}
+            maxLength={550}
             value={
               formData.form_1_aikataulutus ? formData.form_1_aikataulutus : ""
             }
@@ -104,7 +104,7 @@ const Form1 = () => {
           <label htmlFor="1-2">Arvioi budjetti rekrytoinnille</label>
           <textarea
             className="large"
-            maxLength={400}
+            maxLength={550}
             onChange={(e) => setValues(e)}
             id="1-2"
             name="form_1_budjetti"
