@@ -80,7 +80,7 @@ const Form2 = () => {
 
             <textarea
               onChange={(e) => setValues(e)}
-              maxLength={500}
+              maxLength={200}
               name="form_2_eta_tyo_tai_monta_sijaintia"
               value={
                 formData.form_2_eta_tyo_tai_monta_sijaintia
@@ -112,7 +112,7 @@ const Form2 = () => {
           <textarea
             onChange={(e) => setValues(e)}
             className="large"
-            maxLength={500}
+            maxLength={700}
             id="2-6"
             name="form_2_yrityksen_kuvaus"
             value={
@@ -183,7 +183,7 @@ const Form2 = () => {
           <label htmlFor="2-7">Työnkuvaus</label>
           <textarea
             onChange={(e) => setValues(e)}
-            maxLength={500}
+            maxLength={700}
             className="large"
             id="2-7"
             name="form_2_tyon_kuvaus"
