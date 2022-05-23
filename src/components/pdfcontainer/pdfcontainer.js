@@ -218,7 +218,5 @@ const handlePdf = (formdata) => {
   );
 
   doc.save("test.pdf");
-
-  console.log(doc.getFontList());
 };
 export { handlePdf };
