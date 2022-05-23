@@ -13,6 +13,7 @@ const DataProvider = ({ children }) => {
         ...formData,
         [e.target.name]:
           e.target.type === "checkbox" ? e.target.checked : e.target.value,
+        form_started: true,
       });
     } else {
       setFormData(defaultFormData);
