@@ -1,6 +1,7 @@
 import { formatDate } from "../helpers/formatTime";
 
 const defaultFormData = {
+  form_started: false,
   form_1_osaaminen: "",
   form_1_tavoitteet: "",
   form_1_aikataulutus: "",

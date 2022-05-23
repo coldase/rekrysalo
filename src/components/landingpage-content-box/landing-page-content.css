@@ -67,6 +67,42 @@
 .landingpage-hint-text p {
   margin: 0;
   align-self: center;
+  
+}
+
+.landingpage-buttons-grp {
+  display: flex;
+  margin-left: 55px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+
+.landingpage-button {
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  background-color:  var(--main-blue);
+  cursor: pointer;
+  color: var(--main-white);
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.landingpage-button:hover {
+  background-color: var(--main-green);
+}
+
+
+.landingpage-button p {
+  font-weight: 500;
+  margin: 0;
+  align-self: center;
+}
+
+#hidden-btn {
+  display: none;
 }
 
 @media only screen and (max-width: 770px) {
@@ -81,13 +117,11 @@
     margin: 20px 10px;
   }
   .landingpage-content-grp1 {
-    /* text-align: center; */
     margin: 0px 15px 0px 30px;
     font-size: 15px;
     font-weight: 400;
   }
   .landingpage-content-grp2 {
-    /* margin: 40px 15px; */
     margin: 40px 15px 30px 30px;
     font-size: 15px;
     font-weight: 400;
@@ -102,5 +136,14 @@
   }
   .landingpage-hint-icon {
     font-size: 3rem;
+  }
+
+  .landingpage-buttons-grp {
+    margin-left: 35px;
+    font-size: 15px;
+    margin-top: 10px;
+  } 
+  .landingpage-button {
+    height: 30px;
   }
 }
