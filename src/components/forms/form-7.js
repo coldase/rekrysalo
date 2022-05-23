@@ -9,6 +9,10 @@ const Form7 = () => {
         <p>Valmista tuli!</p>
         <FaThumbsUp className="thumbs-icon" />
       </div>
+      <p style={{ textAlign: "center" }}>
+        Voit tulostaa tai ladata tiedoston alla olevasta napista
+      </p>
+
       <FormNavButtons />
     </div>
   );

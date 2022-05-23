@@ -6,7 +6,7 @@ import { handlePdf } from "../pdfcontainer/pdfcontainer";
 
 const FormNavButtons = () => {
   const params = useParams();
-  const [formData, setFormData] = useFormData();
+  const [formData] = useFormData();
 
   return (
     <div className="form-nav-buttons-container">
@@ -24,9 +24,9 @@ const FormNavButtons = () => {
         </div>
       ) : null}
       {params.tab === "7" ? (
-        <div className="form-nav-button" onClick={() => setFormData("reset")}>
-          <p>Tyhjennä</p>
-        </div>
+        <Link to="/" className="form-nav-button">
+          <p>Etusivulle</p>
+        </Link>
       ) : (
         <Link
           to={
