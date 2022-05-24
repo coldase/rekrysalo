@@ -217,6 +217,92 @@ const handlePdf = (formdata) => {
     false
   );
 
+  //Page 6
+  doc.addPage();
+  text(doc, "Muistilista", "bold", 15, 20, false);
+  text(doc, "1. Osaamisen tarve", "", 15, 35, false);
+
+  let st1 = "";
+  if (formdata.form_1_1) {
+    st1 +=
+      "Tekijän löytäminen on helpompaa kun tiedät mitä tarvitset. Virherekrytointi on suurin vältettävissä oleva menoerä. ";
+  }
+  if (formdata.form_1_2) {
+    st1 +=
+      "Varaa rekrytointiin tarpeeksi aikaa. Pidä aikataulusta kiinni. Yleensä pienyrittäjän rekrytointiin kuluu aikaa n. kuukausi, josta työaikaa on n. 2-5 kokonaista työpäivää. ";
+  }
+  if (formdata.form_1_3) {
+    st1 +=
+      "Vastavalmistunut tai vastaava on aluksi halvempi palkattava, tosin perehdytys vie alkuun siivun tuottavuudesta. Kokenut osaaja taas voi tuoda yritykselle nopeammin suurempia tuloja, mutta on kalliimpi palkattava. ";
+  }
+  text(doc, st1, "", 11, 45, true);
+  text(doc, "2. Työpaikkailmoitus", "", 15, 80, false);
+
+  let st2 = "";
+  if (formdata.form_2_1) {
+    st2 +=
+      "Olethan muistanut jakaa ilmoitustasi myös sosiaalisessa mediassa, Facebook, Instagram, Twitter jne. ";
+  }
+  if (formdata.form_2_2) {
+    st2 +=
+      "Esittele yrityksesi toimintaa lyhyesti. Tiivistä asiat jotka saattavat kiinnostaa hakijoitasi. Kerro mitä yrityksesi tarjoaa hakijalle. Älä jaarittele, yritä pitää tekstilohkot lyhyinä. ";
+  }
+  if (formdata.form_2_3) {
+    st2 += "Anna tehtävänimikkeeksi mahdollisimman selkeä ja kuvaava nimi. ";
+  }
+  if (formdata.form_2_4) {
+    st2 +=
+      "Anna mahdollisimman selkeä kuvaus työn sisällöstä. Älä jaarittele, yritä pitää tekstilohkot lyhyinä. ";
+  }
+  if (formdata.form_2_5) {
+    st2 +=
+      "Kuvalliset ilmoitukset saavat enemmän huomiota. Valitse sellainen kuva joka vahvistaa yrityskuvaasi. Videon tekeminen kannattaa, jos sinulla on siihen resursseja. ";
+  }
+  text(doc, st2, "", 11, 90, true);
+
+  text(doc, "3. Hakemusten käsittely", "", 15, 130, false);
+
+  let st3 = "";
+  if (formdata.form_3_1) {
+    st3 += "Yrityskuvan kannalta on hyvä vastata kaikille hakijoille. ";
+  }
+  if (formdata.form_3_2) {
+    st3 +=
+      "Yrityskuvan kannalta on kannattavaa luoda hyvä hakijakokemus. Vastaa kaikille hakijoille mahdollisimmnan nopeasti, ole täsmällinen, arvosta hakemuksia ja ole kohtelias. ";
+  }
+  text(doc, st3, "", 11, 140, true);
+
+  text(doc, "4. Haastattelu", "", 15, 163, false);
+
+  let st4 = "";
+  if (formdata.form_4_1) {
+    st4 +=
+      "Päätä tärkeimmät kysymykset, jotka tulee kysyttyä jokaiselta, vaikka itse haastattelut kulkisivat eri tavoilla. ";
+  }
+  text(doc, st4, "", 11, 173, true);
+
+  text(doc, "5. Sopimus", "", 15, 193, false);
+
+  let st5 = "";
+  if (formdata.form_5_1) {
+    st5 +=
+      "Sopimuspohjana voit käyttää vaikka työsuojelu.fi -palvelusta löytyvää pohjaa. ";
+  }
+  text(doc, st5, "", 11, 203, true);
+
+  text(doc, "6. Perehdytys", "", 15, 220, false);
+
+  let st6 = "";
+  if (formdata.form_6_1) {
+    st6 +=
+      "Lisää tietoa työturvallisuuslaista osoittessa www.tyoturvallisuus.eu. ";
+  }
+  if (formdata.form_6_2) {
+    st6 +=
+      "Perehdytyskansio on infopaketti yrityksesi uudelle työntekijälle. Perehdytyskansion pohjan löydät osoitteesta www.perehdytysopas.fi. ";
+  }
+  text(doc, st6, "", 11, 230, true);
+
   doc.save("test.pdf");
 };
 export { handlePdf };

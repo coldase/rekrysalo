@@ -15,19 +15,22 @@ const InfoBubbleContainer = ({ type }) => {
           {type === "l" && (
             <>
               <InfoBubble
-                marginB={400}
+                marginB={360}
+                name={"form_1_1"}
                 type={type}
                 title={bubbleInfo.form1_1_l.title}
                 content={bubbleInfo.form1_1_l.content}
               />
               <InfoBubble
                 type={type}
-                marginB={30}
+                name={"form_1_2"}
+                marginB={10}
                 title={bubbleInfo.form1_2_l.title}
                 content={bubbleInfo.form1_2_l.content}
               />
               <InfoBubble
                 marginB={0}
+                name={"form_1_3"}
                 type={type}
                 title={bubbleInfo.form1_3_l.title}
                 content={bubbleInfo.form1_3_l.content}
@@ -37,13 +40,13 @@ const InfoBubbleContainer = ({ type }) => {
           {type === "r" && (
             <>
               <InfoBubble
-                marginB={465}
+                marginB={475}
                 type={type}
                 title={bubbleInfo.form1_1_r.title}
                 content={bubbleInfo.form1_1_r.content}
               />
               <InfoBubble
-                marginB={90}
+                marginB={120}
                 type={type}
                 title={bubbleInfo.form1_2_r.title}
                 content={bubbleInfo.form1_2_r.content}
@@ -66,34 +69,39 @@ const InfoBubbleContainer = ({ type }) => {
               <InfoBubble
                 marginB={
                   formData.form_2_radio === "1"
-                    ? 250
+                    ? 200
                     : formData.form_2_radio === "2"
-                    ? 150
-                    : 50
+                    ? 100
+                    : 10
                 }
                 type={type}
+                name={"form_2_1"}
                 title={bubbleInfo.form2_1_l.title}
                 content={bubbleInfo.form2_1_l.content}
               />
               <InfoBubble
-                marginB={250}
+                marginB={220}
+                name={"form_2_2"}
                 type={type}
                 title={bubbleInfo.form2_3_l.title}
                 content={bubbleInfo.form2_3_l.content}
               />
               <InfoBubble
                 marginB={10}
+                name={"form_2_3"}
                 type={type}
                 title={bubbleInfo.form2_2_l.title}
                 content={bubbleInfo.form2_2_l.content}
               />
               <InfoBubble
                 marginB={800}
+                name={"form_2_4"}
                 type={type}
                 title={bubbleInfo.form2_4_l.title}
                 content={bubbleInfo.form2_4_l.content}
               />
               <InfoBubble
+                name={"form_2_5"}
                 marginB={20}
                 type={type}
                 title={bubbleInfo.form2_5_l.title}
@@ -138,12 +146,14 @@ const InfoBubbleContainer = ({ type }) => {
             <>
               <InfoBubble
                 marginT={20}
-                marginB={170}
+                name={"form_3_1"}
+                marginB={120}
                 type={type}
                 title={bubbleInfo.form3_1_l.title}
                 content={bubbleInfo.form3_1_l.content}
               />
               <InfoBubble
+                name={"form_3_2"}
                 type={type}
                 title={bubbleInfo.form3_2_l.title}
                 content={bubbleInfo.form3_2_l.content}
@@ -174,6 +184,7 @@ const InfoBubbleContainer = ({ type }) => {
             <>
               <InfoBubble
                 marginT={170}
+                name={"form_4_1"}
                 type={type}
                 marginB={20}
                 title={bubbleInfo.form4_1_l.title}
@@ -200,6 +211,7 @@ const InfoBubbleContainer = ({ type }) => {
             <>
               <InfoBubble
                 marginB={20}
+                name={"form_5_1"}
                 type={type}
                 link={bubbleInfo.form5_1_l.link}
                 title={bubbleInfo.form5_1_l.title}
@@ -225,13 +237,15 @@ const InfoBubbleContainer = ({ type }) => {
           {type === "l" && (
             <>
               <InfoBubble
-                marginB={125}
+                name={"form_6_1"}
+                marginB={95}
                 type={type}
                 link={bubbleInfo.form6_1_l.link}
                 title={bubbleInfo.form6_1_l.title}
                 content={bubbleInfo.form6_1_l.content}
               />
               <InfoBubble
+                name={"form_6_2"}
                 type={type}
                 link={bubbleInfo.form6_2_l.link}
                 title={bubbleInfo.form6_2_l.title}

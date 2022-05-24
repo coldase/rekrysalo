@@ -4,9 +4,20 @@ import {
   BsFillQuestionCircleFill,
 } from "react-icons/bs";
 import { useState } from "react";
+import { useFormData } from "../../hooks/useFormData";
 
-const InfoBubble = ({ marginT, marginB, title, content, type, link, hide }) => {
+const InfoBubble = ({
+  marginT,
+  marginB,
+  title,
+  content,
+  type,
+  link,
+  hide,
+  name,
+}) => {
   const [isHidden, setIsHidden] = useState(true);
+  const [formData, setValues] = useFormData();
   return (
     <div className="outerbubble" style={hide && { opacity: 0 }}>
       {type === "r" && (
@@ -37,6 +48,17 @@ const InfoBubble = ({ marginT, marginB, title, content, type, link, hide }) => {
           <a href={link[1]} target="_blank" rel="noreferrer">
             {link[0]}
           </a>
+        )}
+        {type === "l" && (
+          <div className="add-check-container">
+            <input
+              onChange={(e) => setValues(e)}
+              type="checkbox"
+              name={name}
+              checked={formData[name]}
+            ></input>
+            <p>Lisää vinkki muistilistaan</p>
+          </div>
         )}
       </div>
       {type === "l" && (

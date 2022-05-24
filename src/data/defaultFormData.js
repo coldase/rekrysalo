@@ -32,6 +32,27 @@ const defaultFormData = {
   form_4_haastettelutyyppi: "Valitse",
   form_4_haastattelurunko: "",
   form_4_showEsimerkit: false,
+
+  //Muistilista
+  form_1_1: false,
+  form_1_2: false,
+  form_1_3: false,
+
+  form_2_1: false,
+  form_2_2: false,
+  form_2_3: false,
+  form_2_4: false,
+  form_2_5: false,
+
+  from_3_1: false,
+  form_3_2: false,
+
+  form_4_1: false,
+
+  form_5_1: false,
+
+  form_6_1: false,
+  form_6_2: false,
 };
 
 export { defaultFormData };

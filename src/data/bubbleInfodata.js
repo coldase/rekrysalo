@@ -190,7 +190,7 @@ export const bubbleInfo = {
     title: "Vinkki",
     content: [
       "Perehdytyskansio on infopaketti yrityksesi uudelle työntekijälle",
-      "Perehdytyskantion pohjan löydät täältä:",
+      "Perehdytyskansion pohjan löydät täältä:",
     ],
     link: ["Perehdytyspohja", "https://www.perehdytysopas.fi/"],
   },
