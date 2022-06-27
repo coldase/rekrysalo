@@ -1,5 +1,6 @@
 import "./landingpage-nav.css";
 import LandingPageNavBlock from "./landingpage-nav-block/landingpage-nav-block";
+
 const LandingPageNav = () => {
   return (
     <div className="landingpage-nav-container">

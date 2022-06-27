@@ -1,25 +1,30 @@
-import { createContext, useEffect } from "react";
+import { createContext, useEffect, useTransition } from "react";
 import { useState } from "react";
 import { defaultFormData } from "../data/defaultFormData";
 
 const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
+  const [, startTransistion] = useTransition();
   const [formData, setFormData] = useState(defaultFormData);
 
+  // Set values into data state when typing in forms
   const setValues = (e) => {
-    if (e !== "reset") {
-      setFormData({
-        ...formData,
-        [e.target.name]:
-          e.target.type === "checkbox" ? e.target.checked : e.target.value,
-        form_started: true,
-      });
-    } else {
-      setFormData(defaultFormData);
-    }
+    startTransistion(() => {
+      if (e !== "reset") {
+        setFormData({
+          ...formData,
+          [e.target.name]:
+            e.target.type === "checkbox" ? e.target.checked : e.target.value,
+          form_started: true,
+        });
+      } else {
+        setFormData(defaultFormData);
+      }
+    });
   };
 
+  // Get old form data from localstorage and set into state if found
   useEffect(() => {
     const getOldData = async () => {
       try {
@@ -35,6 +40,7 @@ const DataProvider = ({ children }) => {
     getOldData();
   }, []);
 
+  // Save formdata into localstorage when formdata changes
   useEffect(() => {
     const setLocal = async () => {
       try {

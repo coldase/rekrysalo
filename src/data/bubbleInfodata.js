@@ -1,3 +1,5 @@
+// Data for info- and helpbubbles
+
 export const bubbleInfo = {
   // ### Form 1
   // Left

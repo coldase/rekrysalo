@@ -5,6 +5,10 @@ var lMargin = 15; //left margin in mm
 var rMargin = 40; //right margin in mm
 var pdfInMM = 210; // width of A4 in mm
 
+/*
+Draws text into pdf
+  params: document, text, fontweight, fontsize, position-y, is multiline?
+*/
 const text = (doc, text, weight, fontsize, posy, multi) => {
   let lmg = lMargin;
   if (fontsize === 11) {
@@ -21,12 +25,12 @@ const text = (doc, text, weight, fontsize, posy, multi) => {
   }
 };
 
+// Formats date yyyy-mm-dd -> dd.mm.yyyy
 const formatDate = (d) => {
   const sp = d.split("-");
   return `${sp[2]}.${sp[1]}.${sp[0]}`;
 };
 
-formatDate("2022-05-02");
 const handlePdf = (formdata) => {
   let doc = new jsPDF();
 

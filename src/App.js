@@ -1,13 +1,3 @@
-/*
-
-  TODO:
-    - Preview sivu
-    - Tallenna button?
-    - form 1 bottom "vinkki napin takaa löydät..."
-    - form 2 top "suosituimmat työpaikkojen..."
-    
-*/
-
 import "./App.css";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./components/pages/landing-page/landing-page";
